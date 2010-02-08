@@ -1,0 +1,17 @@
+body {
+  font-family: sans-serif;
+}
+
+table.reference tbody tr {
+  border: solid thin black;
+}
+
+.literallayout {
+  margin-left: 20px;
+  font-family: monospace;
+  background-color: #E0E0E0;
+}
+
+.legalnotice {
+  font-size: 0.8em;
+}
