@@ -1,0 +1,15 @@
+<chapter>
+  <title>Chapter</title>
+  <section>
+    <title>Section 1</title>
+    <para>
+      This section contains a piece of <code>code text</code>.
+    </para>
+    <programlisting><![CDATA[
+    <?xml version="1.0"?>
+    <hello>
+      <world/>
+    </hello>
+    ]]></programlisting>
+  </section>
+</chapter>

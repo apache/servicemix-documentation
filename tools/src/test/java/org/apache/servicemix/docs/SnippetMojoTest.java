@@ -24,6 +24,7 @@ import java.net.URL;
 
 import org.apache.maven.plugin.MojoExecutionException;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -34,10 +35,10 @@ import static org.junit.Assert.assertTrue;
  */
 public class SnippetMojoTest {
 
-    private SnippetMojo mojo;
+    private static SnippetMojo mojo;
 
-    @Before
-    public void setUp() throws MojoExecutionException, MalformedURLException {
+    @BeforeClass
+    public static void setUp() throws MojoExecutionException, MalformedURLException {
         mojo = new SnippetMojo();
         mojo.snippetCache = new File("target/tests/snippets-" + System.currentTimeMillis()); 
         mojo.snippetBase = new File("src/test/resources").toURI().toURL();

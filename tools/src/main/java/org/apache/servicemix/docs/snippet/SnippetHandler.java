@@ -83,7 +83,11 @@ public class SnippetHandler extends URLStreamHandler {
                         copy(in, out, id);
                     }
                 } catch (IOException e) {
-                    mojo.getLog().warn("Unable to include snippet " + url.toExternalForm(), e);
+                    out.println("missing snippet: " + url);
+
+                    // summary warning message and full detail debug logging
+                    mojo.getLog().warn("Unable to include snippet " + url.toExternalForm());
+                    mojo.getLog().debug("Unable to include snippet " + url.toExternalForm(), e);
                 }
 
                 out.println("]]></programlisting>");
@@ -141,8 +145,9 @@ public class SnippetHandler extends URLStreamHandler {
             copy(in, out);
             out.flush();
         } catch (IOException e) {
-            mojo.getLog().warn("Unable to cache data for " + name, e);
-            throw e;
+            // summary warning message and full detail debug message
+            mojo.getLog().warn("Unable to cache data for " + name + " : " + e.getMessage());
+            mojo.getLog().debug("Unable to cache data for " + name + " : " + e.getMessage(), e);
         } finally {
             if (in != null) {
                 in.close();

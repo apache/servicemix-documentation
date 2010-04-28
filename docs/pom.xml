@@ -158,12 +158,19 @@
         <groupId>org.apache.servicemix.docs</groupId>
         <artifactId>tools</artifactId>
         <version>${pom.version}</version>
-        <inherited>false</inherited>  <!-- URL handlers only have to be registered once -->
         <executions>
           <execution>
-            <phase>initialize</phase>
+            <id>configure-snippet-handler</id>
+            <inherited>false</inherited>    <!-- URL handlers only have to be registered once -->
             <goals>
               <goal>snippet</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>confluence-to-docbook</id>
+            <inherited>true</inherited>
+            <goals>
+              <goal>confluence-to-docbook</goal>
             </goals>
           </execution>
         </executions>

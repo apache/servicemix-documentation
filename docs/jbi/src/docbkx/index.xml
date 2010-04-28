@@ -50,6 +50,7 @@
   <part>
     <title>ServiceMix JBI Components</title>
     <xi:include href="servicemix-bean.xml" parse="xml"/>
+    <xi:include href="servicemix-camel.wiki.xml" parse="xml"/>
     <xi:include href="servicemix-saxon.xml" parse="xml"/>
 
 

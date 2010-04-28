@@ -1,0 +1,18 @@
+<chapter>
+  <title>Chapter</title>
+  <section>
+    <title>Section 1</title>
+    <para>
+      Paragraph 1 starts here...
+    </para>
+    <para>
+      Paragraph 2 starts here...
+    </para>
+    <section>
+      <title>Section 1.1</title>
+      <para>
+        And one more paragraph
+      </para>
+    </section>
+  </section>
+</chapter>

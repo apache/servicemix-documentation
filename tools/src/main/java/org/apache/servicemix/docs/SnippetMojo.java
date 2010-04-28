@@ -30,6 +30,7 @@ import java.net.URLStreamHandlerFactory;
  *
  * @goal snippet
  * @phase initialize
+ * @inheritByDefault false
  */
 public class SnippetMojo extends AbstractMojo {
 

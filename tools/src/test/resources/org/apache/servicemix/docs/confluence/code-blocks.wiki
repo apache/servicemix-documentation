@@ -1,0 +1,11 @@
+h1. Chapter
+
+h2. Section 1
+This section contains a piece of {{code text}}.
+
+{code}
+<?xml version="1.0"?>
+<hello>
+  <world/>
+</hello>
+{code}
