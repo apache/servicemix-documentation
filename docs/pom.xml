@@ -114,6 +114,7 @@
                   <fileset dir="${project.build.directory}/common/theme"/>
                 </copy>
               </postProcess>
+              <targetDirectory>${project.reporting.outputDirectory}/html</targetDirectory>
             </configuration>
           </execution>
           <execution>
@@ -124,6 +125,7 @@
             <phase>verify</phase>
             <configuration>
               <foCustomization>${project.build.directory}/common/styles/docbook-fo.xsl</foCustomization>
+              <targetDirectory>${project.reporting.outputDirectory}/pdf</targetDirectory>
             </configuration>
           </execution>
         </executions>
