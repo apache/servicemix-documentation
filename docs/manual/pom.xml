@@ -22,36 +22,13 @@
 
   <parent>
     <groupId>org.apache.servicemix.docs</groupId>
-    <artifactId>parent</artifactId>
+    <artifactId>docs</artifactId>
     <version>4.3-SNAPSHOT</version>
   </parent>
 
-  <artifactId>common</artifactId>
-  <packaging>jar</packaging>
-  
-  <name>Apache ServiceMix :: Common files for documentation</name>
-  <description>Common files (stylesheets, ...)</description>
-  
-  <build>
-    <plugins>
-      <plugin>      
-        <artifactId>maven-remote-resources-plugin</artifactId>
-        <version>1.1</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>bundle</goal>
-            </goals>
-            <configuration>
-              <includes>
-                <include>**/*.xsl</include>
-                <include>**/*.css</include>
-              </includes>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
+  <artifactId>quickstart</artifactId>
+  <packaging>pom</packaging>
+  <name>Apache ServiceMix :: Documentation :: Programmer's Manual</name>
+  <description>The ServiceMix Programmer's Guide</description>
 
 </project>

@@ -1,7 +1,0 @@
-h1. Chapter
-
-h2. Section 1
-
-h3. Section 1.1
-
-h2. Section 2

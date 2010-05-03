@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<chapter id="whatissmx4"
+         xmlns="http://docbook.org/ns/docbook"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="
+               http://docbook.org/ns/docbook
+               http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+         version="5.0" xml:lang="en">
+  <title>What is ServiceMix 4 ?</title>
+
+  <para>Apache ServiceMix is an open source ESB (Enterprise Service Bus) that
+  combines the functionality of a Service Oriented Architecture (SOA) and the
+  modularity. The adoption of a Service Bus allows to decouple the applicatons
+  together and reduce dependencies. Messages are used to wired the
+  applications (=services) and/or connectors to exchange information using
+  different protocols or communications mode like FTP, HTTP, WebServices,
+  ...
+  </para>
+  
+  <para>This new version of Apache ServiceMix is more than an evolution of the 
+  previous as the kernel of the platform has been completety rewritten and is designed
+  top of the OSGI specification. Using OSGI framework brings a new important feature
+  for SOA development : modularity. That means that we can handle classloading and application
+  lifecycle differently between the components. 
+  </para>
+  
+  <para>ServiceMix is lightweight and easily embeddable, has integrated Spring
+  support and can be run at the edge of the network (inside a client or
+  server), as a standalone ESB provider or as a service within another ESB.
+  You can use ServiceMix in Java SE or Java EE application server.
+  </para>
+  
+  <!-- Section - level 1 - Platform presentation -->
+  <xi:include href="whatissmx4/platform_presentation.xml" />
+
+  <!-- Section - level 1 - Osgi for the dummies -->
+  <xi:include href="whatissmx4/osgi_for_dummies.xml" />
+
+  <!-- Section - level 1 - Kernel of Servicemix -->
+  <xi:include href="whatissmx4/kernel_servicemix.xml" />
+
+  <!-- Section - level 1 - JBI container and integration with OSGI -->
+  <xi:include href="whatissmx4/jbi_container_integration_osgi.xml" />
+
+  <!-- Section - level 1 - Messaging bus -->
+  <xi:include href="whatissmx4/messaging_bus.xml" />
+
+  <!-- Section - level 1 - Services proposed -->
+  <xi:include href="whatissmx4/services_proposed.xml" />
+</chapter>

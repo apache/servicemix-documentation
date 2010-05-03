@@ -1,9 +1,0 @@
-h1. Chapter
-
-h2. Section 1
-Paragraph 1 starts here...
-
-Paragraph 2 starts here...
-
-h3. Section 1.1
-And one more paragraph

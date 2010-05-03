@@ -23,7 +23,7 @@
   <parent>
     <groupId>org.apache.servicemix.docs</groupId>
     <artifactId>parent</artifactId>
-    <version>4.2.0-SNAPSHOT</version>
+    <version>4.3-SNAPSHOT</version>
   </parent>
 
   <artifactId>docs</artifactId>
@@ -32,12 +32,15 @@
   <description>Apache ServiceMix Documentation</description>
 
   <modules>
-    <module>quickstart</module>
+    <module>manual</module>
     <module>jbi</module>
   </modules>
 
   <properties>
     <docbkx.start.page>index.xml</docbkx.start.page>
+    
+    <!-- toolchain versions -->
+    <docs-maven-plugin.version>0.1-SNAPSHOT</docs-maven-plugin.version>
   </properties>
 
   <build>
@@ -155,9 +158,9 @@
       </plugin>
 
       <plugin>
-        <groupId>org.apache.servicemix.docs</groupId>
-        <artifactId>tools</artifactId>
-        <version>${pom.version}</version>
+        <groupId>org.apache.servicemix.tooling</groupId>
+        <artifactId>docs-maven-plugin</artifactId>
+        <version>${docs-maven-plugin.version}</version>
         <executions>
           <execution>
             <id>configure-snippet-handler</id>
