@@ -97,8 +97,9 @@
         <artifactId>docbkx-maven-plugin</artifactId>
         <version>2.0.9</version>
         <executions>
+
           <execution>
-            <id>generate-html</id>
+            <id>generate-chuncked-html</id>
             <goals>
               <goal>generate-html</goal>
             </goals>
@@ -108,7 +109,7 @@
               <chunkToc>false</chunkToc>
               <chunkedOutput>true</chunkedOutput>
               <postProcess>
-                <property name="theme" location="${project.build.directory}/docbkx/html/theme"/>
+                <property name="theme" location="${project.build.directory}/site/html/theme"/>
                 <mkdir dir="${theme}"/>
                 <copy todir="${theme}">
                   <fileset dir="${project.build.directory}/common/theme"/>
@@ -117,6 +118,27 @@
               <targetDirectory>${project.reporting.outputDirectory}/html</targetDirectory>
             </configuration>
           </execution>
+
+          <execution>
+            <id>generate-single-html</id>
+            <goals>                                                                                                                                                       
+              <goal>generate-html</goal>
+            </goals>
+            <phase>verify</phase>
+            <configuration>
+              <htmlStylesheet>theme/master.css</htmlStylesheet>
+              <chunkedOutput>false</chunkedOutput>
+              <postProcess>
+                <property name="theme" location="${project.build.directory}/site/single/theme"/>
+                <mkdir dir="${theme}"/>
+                <copy todir="${theme}">
+                  <fileset dir="${project.build.directory}/common/theme"/>
+                </copy>
+              </postProcess>
+              <targetDirectory>${project.reporting.outputDirectory}/single</targetDirectory>
+            </configuration>
+          </execution>
+
           <execution>
             <id>generate-pdf</id>
             <goals>

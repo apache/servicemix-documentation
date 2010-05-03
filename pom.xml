@@ -59,6 +59,7 @@
             <phase>initialize</phase>
             <configuration>
               <tasks>
+                <!-- a little hack to ensure site:deploy works fine -->
                 <mkdir dir="target/site" />
                 <touch file="target/site/UPDATE" />
               </tasks>
