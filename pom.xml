@@ -27,14 +27,14 @@
   <groupId>org.apache.servicemix.docs</groupId>
   <artifactId>parent</artifactId>
   <packaging>pom</packaging>
-  <version>4.3-SNAPSHOT</version>
+  <version>3.3-SNAPSHOT</version>
   
   <name>Apache ServiceMix (Documentation)</name>
   <description>The ServiceMix reference documentation</description>
 
   <properties>
     <components.version>2010.02-SNAPSHOT</components.version>
-    <servicemix-version>4.3-SNAPSHOT</servicemix-version>
+    <servicemix-version>3.3-SNAPSHOT</servicemix-version>
   </properties>
 
   <distributionManagement>

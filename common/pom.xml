@@ -23,7 +23,7 @@
   <parent>
     <groupId>org.apache.servicemix.docs</groupId>
     <artifactId>parent</artifactId>
-    <version>4.3-SNAPSHOT</version>
+    <version>3.3-SNAPSHOT</version>
   </parent>
 
   <artifactId>common</artifactId>

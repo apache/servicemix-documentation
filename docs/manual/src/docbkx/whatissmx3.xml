@@ -24,7 +24,7 @@
                http://docbook.org/ns/docbook
                http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
          version="5.0" xml:lang="en">
-  <title>What is ServiceMix 4 ?</title>
+  <title>What is ServiceMix 3 ?</title>
 
   <para>Apache ServiceMix is an open source ESB (Enterprise Service Bus) that
   combines the functionality of a Service Oriented Architecture (SOA) and the
@@ -35,13 +35,6 @@
   ...
   </para>
   
-  <para>This new version of Apache ServiceMix is more than an evolution of the 
-  previous as the kernel of the platform has been completety rewritten and is designed
-  top of the OSGI specification. Using OSGI framework brings a new important feature
-  for SOA development : modularity. That means that we can handle classloading and application
-  lifecycle differently between the components. 
-  </para>
-  
   <para>ServiceMix is lightweight and easily embeddable, has integrated Spring
   support and can be run at the edge of the network (inside a client or
   server), as a standalone ESB provider or as a service within another ESB.
@@ -49,20 +42,20 @@
   </para>
   
   <!-- Section - level 1 - Platform presentation -->
-  <xi:include href="whatissmx4/platform_presentation.xml" />
+  <xi:include href="whatissmx3/platform_presentation.xml" />
 
   <!-- Section - level 1 - Osgi for the dummies -->
-  <xi:include href="whatissmx4/osgi_for_dummies.xml" />
+  <xi:include href="whatissmx3/osgi_for_dummies.xml" />
 
   <!-- Section - level 1 - Kernel of Servicemix -->
-  <xi:include href="whatissmx4/kernel_servicemix.xml" />
+  <xi:include href="whatissmx3/kernel_servicemix.xml" />
 
   <!-- Section - level 1 - JBI container and integration with OSGI -->
-  <xi:include href="whatissmx4/jbi_container_integration_osgi.xml" />
+  <xi:include href="whatissmx3/jbi_container_integration_osgi.xml" />
 
   <!-- Section - level 1 - Messaging bus -->
-  <xi:include href="whatissmx4/messaging_bus.xml" />
+  <xi:include href="whatissmx3/messaging_bus.xml" />
 
   <!-- Section - level 1 - Services proposed -->
-  <xi:include href="whatissmx4/services_proposed.xml" />
+  <xi:include href="whatissmx3/services_proposed.xml" />
 </chapter>

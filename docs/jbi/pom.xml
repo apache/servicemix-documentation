@@ -5,7 +5,7 @@
   <parent>
     <artifactId>docs</artifactId>
     <groupId>org.apache.servicemix.docs</groupId>
-    <version>4.3-SNAPSHOT</version>
+    <version>3.3-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
 

@@ -17,7 +17,7 @@
     limitations under the License.
 -->
 <!DOCTYPE book [
-	<!ENTITY version "4.2">
+	<!ENTITY version "3.3.2-SNAPSHOT">
 ]>
 <book id="book" label="Apache ServiceMix Manual Guide" status="draft" lang="en"
          xmlns="http://docbook.org/ns/docbook"
@@ -93,16 +93,13 @@
     
     <toc />
     
-    <!-- Chapter on What is ServiceMix 4 -->
-    <xi:include href="whatissmx4.xml"/>
+    <!-- Chapter on What is ServiceMix 3 -->
+    <xi:include href="whatissmx3.xml"/>
     
     <!-- Chapter on installation and build -->
     <xi:include href="installation.xml"/>
     
 	<!-- Chapter on clustering and high-availability -->
     <xi:include href="clustering.xml"/>    
-
- 	<!-- Chapter on ServiceMix migration 3 to 4 -->
-    <xi:include href="migrate.xml"/>   
     
 </book>
