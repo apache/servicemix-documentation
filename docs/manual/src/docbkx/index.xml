@@ -96,6 +96,12 @@
     <!-- Chapter on What is ServiceMix 3 -->
     <xi:include href="whatissmx3.xml"/>
     
+    <!--  Chapter on Introduction to ESB -->
+    <xi:include href="introductiontoesb.xml"/>
+    
+    <!--  Chapter on ServiceMix 3 Background -->
+    <xi:include href="background.xml"/>
+    
     <!-- Chapter on installation and build -->
     <xi:include href="installation.xml"/>
     

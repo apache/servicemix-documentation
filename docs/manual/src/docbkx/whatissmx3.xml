@@ -16,7 +16,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<chapter id="whatissmx4"
+<chapter id="whatissmx3"
          xmlns="http://docbook.org/ns/docbook"
          xmlns:xi="http://www.w3.org/2001/XInclude"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
@@ -26,19 +26,47 @@
          version="5.0" xml:lang="en">
   <title>What is ServiceMix 3 ?</title>
 
-  <para>Apache ServiceMix is an open source ESB (Enterprise Service Bus) that
-  combines the functionality of a Service Oriented Architecture (SOA) and the
-  modularity. The adoption of a Service Bus allows to decouple the applicatons
-  together and reduce dependencies. Messages are used to wired the
-  applications (=services) and/or connectors to exchange information using
-  different protocols or communications mode like FTP, HTTP, WebServices,
-  ...
+  <para>
+    Apache ServiceMix is an open source ESB (Enterprise Service Bus) that combines the functionality of a Service Oriented Architecture (SOA)
+    and an Event Driven Architecture (EDA) to create an agile, enterprise ESB.
   </para>
   
-  <para>ServiceMix is lightweight and easily embeddable, has integrated Spring
-  support and can be run at the edge of the network (inside a client or
-  server), as a standalone ESB provider or as a service within another ESB.
-  You can use ServiceMix in Java SE or Java EE application server.
+  <para>
+    Apache ServiceMix is an open source distributed ESB built from the ground up on the Java Business Integration (JBI) specification JSR-208
+    and released under the Apache license. The goal of JBI is to allow components and services to be integrated in a vendor independant way,
+    allowing users and vendors to plug and play.
+  </para>
+  
+  <para>
+    Apache ServiceMix is lightweight and easily embeddable, has integrated Spring support and can be run at the edge of the network (inside a client
+    or a server), as a standalone ESB provider or as a service within another ESB. You can use ServiceMix in Java SE or a Java EE application
+    server.
+  </para>
+  
+  <para>
+    Apache ServiceMix uses Apache ActiveMQ to provide remoting, clustering, reliability and distributed failover.
+  </para>
+  
+  <para>
+    Apache ServiceMix is completely integrated into Apache Geronimo, which allows you to deploy JBI components and services directly into Geronimo.
+    ServiceMix is being JBI certified as part of the Geronimo project.
+  </para>
+  
+  <para>
+    Other JEE application servers Apache ServiceMix has been integrated with include JBoss, JOnAS with more to follow.
+  </para>
+  
+  <para>
+    Apache ServiceMix includes a complete JBI container supporting all parts of the JBI specification including:
+    <itemizedlist>
+        <listitem><para>NMR (Normalized Message Service and Router)</para></listitem>
+        <listitem><para>JBI Management MBeans</para></listitem>
+        <listitem><para>ant tasks for management and installation of components</para></listitem>
+        <listitem><para>full support for the JBI deployment units with hot-deployment</para></listitem>
+        <listitem><para>a simple Client API for working with JBI components and services</para></listitem>
+        <listitem><para>wide set of JBI components including HTTP, JMS, BPEL, Rules, ...</para></listitem>
+    </itemizedlist>
+    Please, read the JBI documentation if you need more explanations about JBI.
   </para>
   
 </chapter>

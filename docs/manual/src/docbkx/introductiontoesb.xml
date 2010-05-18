@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <!--
+
+        Licensed to the Apache Software Foundation (ASF) under one or more
+        contributor license agreements. See the NOTICE file distributed with
+        this work for additional information regarding copyright ownership.
+        The ASF licenses this file to You under the Apache License, Version
+        2.0 (the "License"); you may not use this file except in compliance
+        with the License. You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+        applicable law or agreed to in writing, software distributed under the
+        License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+        CONDITIONS OF ANY KIND, either express or implied. See the License for
+        the specific language governing permissions and limitations under the
+        License.
+    -->
+<chapter id="introductiontoesb" xmlns="http://docbook.org/ns/docbook"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://docbook.org/ns/docbook
+        http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    version="5.0" xml:lang="en">
+
+    <title>Introduction to ESB</title>
+    
+    <section>
+        <title>The problem</title>
+        <para>
+            Enterprise networks commonly deploy disparate applications, platforms, and business processes that need to communicate
+            or exchange data with each other. The applications, platforms and processes have non-compatible data formats and
+            non-compatible communications protocols. If an enterprise needs to interface with external systems, the integration
+            problem extends outside of a company, encompassing its business partners' IT systems and processes as well.
+        </para>
+        <para>
+            In recent years, there have been several technologies attempting to solve these problems such as Enterprise Application
+            Integration (EAI), Buiness-to-Business (B2B), Service Oriented Architecture (SOA) and WebServices. These solutions range from
+            expansive vendor solutions (high cost, vendor lock-in) to home-grown custom solutions (high maintenance, high cost). The
+            overwhelming disadvantages of these solutions are high cost and low flexibility due to non-standard implementations.
+        </para>
+    </section>
+    
+    <section>
+        <title>The ESB approach</title>
+        <para>
+            A standards-based ESB solves the integration problem without the drawbacks of the other solutions. The purpose of an ESB
+            is to facilitate application and process integration by providing distributed processing, intelligent routing, security, and
+            dynamic data transformation. In an ESB these services are infrastructure services so each application does not have to implement
+            these requirements independently and in a proprietary manner.
+        </para>
+        <para>
+            The ESB addresses the disadvantages of existing solutions by creating a standard infrastructure for integration. Point-to-point
+            solutions, where each of <emphasis>n</emphasis> components requires <emphasis>n-1</emphasis> interfaces for full communication,
+            are replaced by a bus solution where each component requires a single interface to the bus for global communication. An ESB
+            provides distributed messaging, routing, business process orchestration, reliability and security. It also provides pluggable
+            services and, because of the standard bus, these pluggable services can be provided by third parties and still interoperate
+            reliably with the bus.
+        </para>
+        <para>
+            Attributes of an ESB integration infrastructure are:
+            <itemizedlist>
+                <listitem><para>distributed - to remove geographical constraints</para></listitem>
+                <listitem><para>message-based - to promote loose coupling</para></listitem>
+                <listitem><para>open standards-based - to preserve investment and encourage contribution</para></listitem>
+                <listitem><para>reliable - to meet the requirements of mission-critical business operations</para></listitem>
+            </itemizedlist>
+        </para>
+        <para>
+            As an integration infrastructure, the ESB provides a number of functions including:
+            <itemizedlist>
+                <listitem><para>routing</para></listitem>
+                <listitem><para>transformation</para></listitem>
+                <listitem><para>visibility - into messages for content-based routing</para></listitem>
+            </itemizedlist>
+        </para>
+        <para>
+            An ESB also supports requirements such as security, orchestration, and transactionality. These exist in "hard-wired" integration
+            methods, but are not available automatically in a service-oriented architecture. One of the key requirements for the ESB is to 
+            give loosely coupled, services-based integration methods a level of enterprise-class reliability and security.
+        </para>
+        <para>
+            A newer requirement for ESBs is the ability to allow no only loosely-coupled request found in a service oriented architecture,
+            but also to provide the infrastructure for an Event Driven Architecture (EDA). SOA and EDA provide complementary functionality.
+            In EDA an event triggers a message to be sent to other applications that are decoupled from the application that triggered the
+            event. This is an asynchronous operation as the recipient applications may receive or pick-up their messages at a later time,
+            whereas the SOA messaging model is typically synchronous in nature.
+        </para>
+    </section>
+    
+</chapter>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!--
+
+		Licensed to the Apache Software Foundation (ASF) under one or more
+		contributor license agreements. See the NOTICE file distributed with
+		this work for additional information regarding copyright ownership.
+		The ASF licenses this file to You under the Apache License, Version
+		2.0 (the "License"); you may not use this file except in compliance
+		with the License. You may obtain a copy of the License at
+
+		http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+		applicable law or agreed to in writing, software distributed under the
+		License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or implied. See the License for
+		the specific language governing permissions and limitations under the
+		License.
+	-->
+<chapter id="background" xmlns="http://docbook.org/ns/docbook"
+	xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://docbook.org/ns/docbook
+        http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+	version="5.0" xml:lang="en">
+
+	<title>Background</title>
+
+	<para>
+		The Enterprise Service Bus (ESB) - which can be defined as
+		middleware
+		that brings together both integration technologies and
+		runtime
+		services to make business services widely available for reuse -
+		offers
+		the best solution for meeting today's enterprise application
+		integration challenges by providing a software infrastructure that
+		enables SOA. However, there are currently a number of different
+		vendors that provide ESB solutions, some of which focus purely on
+		SOAP/HTTP and others who provide multi-protocol capabilities. Because
+		these vendors span the horizon from big enterprise generalists
+		(application servers), to mid-tier enterprise integration providers,
+		all
+		the way to smaller, ESB/integration specific-providers; there
+		doesn't
+		seem to be an established consensus regarding the key
+		requirements
+		for an ESB.
+    </para>
+
+	<para>
+		As application architects, we have often thought about what
+		requirements
+		would define an ESB designed specifically to cater to the
+		needs
+		of an agile, enterprise integration model. In building for the
+		specific
+		requirements, we realized that we actually needed to develop a
+		new
+		type of ESB, hence the Apache ServiceMix project.
+    </para>
+
+	<para>
+		The main criteria we were looking for in our ESB are as follows:
+	</para>
+	<section>
+		<title>Standards based</title>
+		<para>
+			While standards-based support is marketed by many ESB vendors,
+			the support
+			is provided externally, requiring developers to work with
+			proprietary APIs when directly interacting with internal APIs.
+			ServiceMix was
+			designed with the requirement to eliminate product API
+			lock-in, by being built from the ground up to support the Java
+			Business
+			Integration specification (JSR-208). Our agile ESB needs to
+			use JBI as a first class citizen, but also support POJO deployment
+			for
+			ease of use and testing.
+            </para>
+	</section>
+	<section>
+		<title>Flexible</title>
+		<para>
+			Another characteristic of an agile ESB is the flexibility with
+			which it can
+			be deployed within enterprise application integration
+			framework:
+			standalone, embedded in an application component, or as
+			part of the
+			services supported by an application server. This allows
+			for
+			component
+			re-use throughout the enterprise. For example, the
+			binding for a real-time
+			data feed might be aggregated as a web-service
+			running within
+			an application server, or streamed directly into a fat
+			client on a
+			traders desk. An agile ESB should be able to run both
+			types of
+			configurations
+			seamlessly.
+            </para>
+		<para>
+			To provide rapid prototyping, an agile ESB should support both
+			scripting languages and embedded rule engines, allowing business
+			processes to be
+			modeled and deployed quickly.
+            </para>
+		<section>
+			<title>Reliable</title>
+			<para>
+				Our ESB needs to handle network outages and system failures and
+				to be
+				able to reroute message flows and requests to circumvent
+				failures.
+			</para>
+		</section>
+		<section>
+			<title>Breadth of Connectivity</title>
+			<para>
+				An agile ESB must support both two way reliable Web Services
+				and
+				Message Oriented Middleware and needs to co-operate seamlessly
+				with
+				EIS and
+				custom components, such as batch files.
+                </para>
+		</section>
+	</section>
+
+	<para>
+		We also wanted our agile ESB to be vendor independant and open source,
+		to promote user control of source code and direction.
+		An added benefit of this is not only the zero purchase cost, but the
+		total cost of ownership will be reduced where users are
+		actively contributing and maintaining our ESB.
+	</para>
+	<para>
+		We rapidly came to the conclusion, that as there was no single product
+		adequately meet our needs, we would have to just go
+		a head and build one.
+	</para>
+
+</chapter>        
