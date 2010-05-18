@@ -41,21 +41,4 @@
   You can use ServiceMix in Java SE or Java EE application server.
   </para>
   
-  <!-- Section - level 1 - Platform presentation -->
-  <xi:include href="whatissmx3/platform_presentation.xml" />
-
-  <!-- Section - level 1 - Osgi for the dummies -->
-  <xi:include href="whatissmx3/osgi_for_dummies.xml" />
-
-  <!-- Section - level 1 - Kernel of Servicemix -->
-  <xi:include href="whatissmx3/kernel_servicemix.xml" />
-
-  <!-- Section - level 1 - JBI container and integration with OSGI -->
-  <xi:include href="whatissmx3/jbi_container_integration_osgi.xml" />
-
-  <!-- Section - level 1 - Messaging bus -->
-  <xi:include href="whatissmx3/messaging_bus.xml" />
-
-  <!-- Section - level 1 - Services proposed -->
-  <xi:include href="whatissmx3/services_proposed.xml" />
 </chapter>

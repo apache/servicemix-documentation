@@ -33,7 +33,6 @@
 
   <modules>
     <module>manual</module>
-    <module>jbi</module>
   </modules>
 
   <properties>
