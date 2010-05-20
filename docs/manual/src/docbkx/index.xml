@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
 
     Licensed to the Apache Software Foundation (ASF) under one or more
@@ -102,10 +102,15 @@
     <!--  Chapter on ServiceMix 3 Background -->
     <xi:include href="background.xml"/>
     
-    <!-- Chapter on installation and build -->
+    <!-- Chapter on installation -->
     <xi:include href="installation.xml"/>
     
+    <!-- Chapter on classloaders -->
+    <xi:include href="classloaders.xml"/>
+    
 	<!-- Chapter on clustering and high-availability -->
-    <xi:include href="clustering.xml"/>    
+    <xi:include href="clustering.xml"/>
+    
+    <!-- Chapter on build -->    
     
 </book>
