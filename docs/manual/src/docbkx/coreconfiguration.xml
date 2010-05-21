@@ -16,20 +16,17 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<chapter id="clustering"          
+<chapter id="coreconfiguration"
          xmlns="http://docbook.org/ns/docbook"
          xmlns:xi="http://www.w3.org/2001/XInclude"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-         xsi:schemaLocation="
-               http://docbook.org/ns/docbook
-               http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
          version="5.0" xml:lang="en">
-   	<title>Clustering and High Availability</title>
-   	<para>
-   	    ServiceMix can run in a clustered mode whereby distributed ServiceMix instances utilize auto discovery from ActiveMQ
-   	    to detect not only other ServiceMix instances, but also registered endpoints. Such a distributed scenario requires
-   	    a proper Master/Slave configuration for ActiveMQ. ServiceMix provides load balancing capabilities by default so
-   	    that when a JBI component is instantiated, the component is registered with all other ServiceMix instances via
-   	    multicast communication.
-   	</para>
+    <title>Core configuration</title>
+    <para>
+        ServiceMix uses XML and properties file for the core configuration.
+    </para>         
+    <para>
+        ServiceMix uses the following files and directories structure:
+    </para>
 </chapter>

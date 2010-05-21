@@ -22,6 +22,110 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
          version="5.0" xml:lang="en">
-    <title>Classloaders</title>
-    <para>TODO</para>            
+    <title>Class loaders</title>
+    <para>
+        There are several class loaders involved in ServiceMix:
+        <itemizedlist>
+            <listitem><para>the container class loader</para></listitem>
+            <listitem><para>shared library class loader: the parent is the container class loader</para></listitem>
+            <listitem><para>component class loader: parents are container class loader and any referenced shared library class loader</para></listitem>
+            <listitem><para>service unit class loader: parent is the component class loader</para></listitem>
+        </itemizedlist>
+    </para>
+    <para>
+        The container class loader contains: 
+        <itemizedlist>
+            <listitem><para>JRE</para></listitem>
+            <listitem><para><code>/conf</code></para></listitem>
+            <listitem><para><code>/lib/*.jar</code></para></listitem>
+            <listitem><para><code>/lib/optional/*.jar</code></para></listitem>
+        </itemizedlist>
+        ServiceMix uses Classworlds to configure a class loader finding path. You can add your own path into the <code>conf/servicemix.conf</code> file.
+    </para>
+    <para>
+        The components class loaders are defined in the JBI specification and contain the jars referenced in the JBI descriptor (<code>META-INF/jbi.xml</code>).
+        These class loaders can use a parent-first (default) or self-first delegation. When a class is loaded, the class loader will first ask its parent(s)
+        and work back down the class loader hierarchy, or will first load the class from its referenced jars.
+    </para>
+    <para>
+        The service unit class loader contains:
+        <itemizedlist>
+            <listitem><para><code>/</code></para></listitem>
+            <listitem><para><code>lib/*.jar</code></para></listitem>
+            <listitem><para><code>lib/*.zip</code></para></listitem>
+        </itemizedlist>
+    </para>
+    <para>
+        XBean based service units can define and extend their own class loaders. This can be done by adding the following
+        tag in the main XBean configuration file for the service unit (<code>xbean.xml</code>):
+<code>
+<![CDATA[
+<classpath [inverse="true"]>
+  [<nonOverridable>xxx</nonOverridable>]*
+  [<hidden>xxx</hidden>]*
+  [<location>xxx</location>]*
+</classpath>
+]]>
+</code>
+    </para>
+    <para>
+        The <code>inverse</code> attribute can be set to <code>true</code> to use self-first delegation mode.
+    </para>
+    <para>
+        The <code>nonOverridable</code> tag can be used to specify that classes with a name starting with the specified
+        string can not be overridden by this class loader (the class loader will always use the parent classes). 
+    </para>
+    <para>
+        The <code>hidden</code> tag is used to hide specific classes (whose name start with the specified string) defined
+        by the parent class loader.
+    </para>
+    <para>
+        The <code>location</code> tag can be used to add jars or directories relative to the service unit root to the class
+        loader.
+    </para>
+    <para>
+        You can reference shared libraries and components class loaders using:
+<code>
+<![CDATA[
+<classpath [inverse="true"]>
+  [<nonOverridable>xxx</nonOverridable>]*
+  [<hidden>xxx</hidden>]*
+  [<location>xxx</location>]*
+  [<library>xxx</library>]*
+  [<component>xxx</component>]*
+</classpath>
+]]>
+</code>
+        For example, to reference the "cxf" shared libraries and the "servicemix-wsn2005" component in addition to the jars inside
+        the SU, you could write:
+<code>
+<![CDATA[
+<classpath>
+  <library>cxf</library>
+  <component>servicemix-wsn2005</component>
+</classpath>
+]]>
+</code>
+    </para>
+    <para>
+        You can reference external archives using system properties. For example:
+<code>
+<![CDATA[
+<classpath>
+  <location>${servicemix.home}/lib/ext/my.jar</location>
+</classpath>
+]]>
+</code>        
+    </para>
+    <para>
+        You can explore and use regexp inside external archives (zip, jar, war, ear). For example:
+<code>
+<![CDATA[
+<classpath>
+  <location>jar:file:/path/to/my.ear!/my.jar</location>
+  <location>jar:file:/path/to/my.ear!/other*.jar</location>
+</classpath>
+]]>
+</code>        
+    </para>
 </chapter>

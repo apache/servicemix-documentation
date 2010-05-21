@@ -105,6 +105,9 @@
     <!-- Chapter on installation -->
     <xi:include href="installation.xml"/>
     
+    <!--  Chapter on core configuration -->
+    <xi:include href="coreconfiguration.xml"/>
+    
     <!-- Chapter on classloaders -->
     <xi:include href="classloaders.xml"/>
     
