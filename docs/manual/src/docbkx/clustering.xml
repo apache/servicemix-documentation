@@ -26,10 +26,55 @@
          version="5.0" xml:lang="en">
    	<title>Clustering and High Availability</title>
    	<para>
-   	    ServiceMix can run in a clustered mode whereby distributed ServiceMix instances utilize auto discovery from ActiveMQ
-   	    to detect not only other ServiceMix instances, but also registered endpoints. Such a distributed scenario requires
-   	    a proper Master/Slave configuration for ActiveMQ. ServiceMix provides load balancing capabilities by default so
-   	    that when a JBI component is instantiated, the component is registered with all other ServiceMix instances via
-   	    multicast communication.
+   	    ServiceMix supports both High Availability (HA) and clustering of containers.
    	</para>
+   	<section id="ha">
+   	    <title>High Availability (HA)</title>
+   	    <para>
+   	        High Availability (HA) can be defined as two distinct ServiceMix container instances configured in a master/slave
+   	        configuration. In all cases, the master is <emphasis>active</emphasis> and the slave is in <emphasis>standby</emphasis>
+   	        mode waiting for a failover event to trigger it to take over.
+   	    </para>
+   	    <para>
+   	        <itemizedlist>
+   	            <listitem><para><emphasis>Active</emphasis>: components are listening for and servicing requests.</para></listitem>
+   	            <listitem><para><emphasis>Standby</emphasis>: administrative ports may be open (e.g. JMX) but the process is not listening for or servicing requests.</para></listitem>
+   	        </itemizedlist> 
+   	    </para>
+   	    <para>
+   	        As ServiceMix leverages ActiveMQ to provide HA availability, there are a few choices in terms of how to configure 
+   	        master/slave via ActiveMQ:
+   	        <itemizedlist>
+   	            <listitem><para><emphasis>Shared Filesystem Master-Slave</emphasis> - with shared database master/slave
+   	                two containers use the same physical data store container state. Care should be taken to ensure
+   	                that the file system supports file level locking as this is the mechanism used to select the master.
+   	                If the master process exists, the database lock is released and the slave acquires it and it then 
+   	                becomes the master.</para></listitem>
+   	            <listitem><para><emphasis>JDBC Master-Slave</emphasis> - In JDBC master/slave, the master will lock
+   	                a table in the backend database. The failover event in this case is that the lock is released from
+   	                the database.</para></listitem>
+   	            <listitem><para><emphasis>Pure Master-Slave</emphasis> - With pure master/slave either a shared database
+   	                or a shared filesystem can be used. The master replicates all state changes to the slave so there
+   	                is additional overhead incurred. The failover trigger in pure master/slave is that the slave loses
+   	                its network connection to its master.</para></listitem>
+   	        </itemizedlist>
+   	    </para>
+   	    <para>
+   	        
+   	    </para>
+   	    <section id="clustering">
+   	        <title>Clustering</title>
+   	        <para>
+   	            A cluster can be defined as two or more ACTIVE ServiceMix container instances that are networked together.
+   	            A cluster provides the following benefit:
+   	            <itemizedlist>
+   	                <listitem><para>Connectivity to other ServiceMix containers forming a network of containers.
+   	                Containers can be dynamically added and removed from the network.</para></listitem>
+   	                <listitem><para>Remote component awareness where each container is aware of its peer container's components.
+   	                Networked containers listen for remote component registration/deregistration events and once
+   	                aware can route request to those components.</para></listitem>
+   	            </itemizedlist>
+   	        </para>
+   	    </section>
+   	</section>
 </chapter>
