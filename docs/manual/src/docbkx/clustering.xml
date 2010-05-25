@@ -58,10 +58,36 @@
    	                is additional overhead incurred. The failover trigger in pure master/slave is that the slave loses
    	                its network connection to its master.</para></listitem>
    	        </itemizedlist>
+   	        <section>
+   	            <title>Configuring HA</title>
+   	            <para>
+   	                When learning about ServiceMix HA configuration, a good starting point is to configure HA on a single host. In this scenario lets assume we have container1_host1 (master)
+   	                and container2_host1 (slave).
+   	            </para>
+   	            <para>
+   	                To configure our example using a shared filesystem master/slave, the steps involved including the following:
+   	                <orderedlist>
+   	                    <listitem><para>Install two ServiceMix instances (servicemix1 and servicemix2)</para></listitem>
+   	                    <listitem><para>Ensure servicemix2 is an exact replica of servicemix1. The exact same files should be installed in servicemix2/hotdeploy directory and servicemix2/conf.</para></listitem>
+   	                    <listitem><para>Edit <code>servicemix1/conf/activemq.xml</code> and configure the ActiveMQ persistence adapter:<abbrev>
+   	                        <code>
+<![CDATA[
+  <!-- We use 0.0.0.0 per AMQ-2094 -->
+  <amq:transportConnectors>
+     <amq:transportConnector uri="tcp://0.0.0.0:61616"/>
+  </amq:transportConnectors>
+
+  <amq:persistenceAdapter>
+      <amq:amqPersistenceAdapter directory="file:<shared>/data/amq"/>
+  </amq:persistenceAdapter>
+]]>   	                  
+   	                        </code>
+   	                    </abbrev></para></listitem>
+   	                </orderedlist>
+   	            </para>
+   	        </section>
    	    </para>
-   	    <para>
-   	        
-   	    </para>
+   	    
    	    <section id="clustering">
    	        <title>Clustering</title>
    	        <para>
@@ -73,6 +99,13 @@
    	                <listitem><para>Remote component awareness where each container is aware of its peer container's components.
    	                Networked containers listen for remote component registration/deregistration events and once
    	                aware can route request to those components.</para></listitem>
+   	                <listitem><para>Load balancing where a cluster provides the ability to balance requests in a couple of ways including:
+   	                    <itemizedlist>
+   	                        <listitem><para>Installation of the same component on multiple containers to provide increased capacity and additional HA capabilities.
+   	                        If one container fails the same component in another container can still service the request.</para></listitem>
+   	                        <listitem><para>Partition workload among container instances whereby different containers can handle different tasks and flows can span multiple containers.</para></listitem>
+   	                    </itemizedlist>
+   	                </para></listitem>
    	            </itemizedlist>
    	        </para>
    	    </section>
