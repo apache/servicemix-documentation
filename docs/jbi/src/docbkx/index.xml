@@ -49,20 +49,32 @@
 
   <part>
     <title>ServiceMix JBI Components</title>
-    <xi:include href="servicemix-bean.xml" parse="xml"/>
+    <xi:include href="servicemix-bean.wiki.xml" parse="xml"/>
     <xi:include href="servicemix-camel.wiki.xml" parse="xml"/>
-    <xi:include href="servicemix-saxon.xml" parse="xml"/>
-
+    <xi:include href="servicemix-cxf-bc.wiki.xml" parse="xml"/>
+    <xi:include href="servicemix-cxf-se.wiki.xml" parse="xml"/>
+    <xi:include href="servicemix-drools.wiki.xml" parse="xml"/>
+    <xi:include href="servicemix-eip.wiki.xml" parse="xml"/>
+    <xi:include href="servicemix-file.wiki.xml" parse="xml"/>
+    <xi:include href="servicemix-ftp.wiki.xml" parse="xml"/>
+    <xi:include href="servicemix-http.wiki.xml" parse="xml"/>
+    <xi:include href="servicemix-jms.wiki.xml" parse="xml"/>
+    <xi:include href="servicemix-mail.wiki.xml" parse="xml"/>
+    <xi:include href="servicemix-osworkflow.wiki.xml" parse="xml"/>
+    <xi:include href="servicemix-saxon.wiki.xml" parse="xml"/>
+    <xi:include href="servicemix-scripting.wiki.xml" parse="xml"/>
+    <xi:include href="servicemix-snmp.wiki.xml" parse="xml"/>
+    <xi:include href="servicemix-validation.wiki.xml" parse="xml"/>
+    <xi:include href="servicemix-vfs.wiki.xml" parse="xml"/>
+    <xi:include href="servicemix-wsn2005.wiki.xml" parse="xml"/>
+    <xi:include href="servicemix-xmpp.wiki.xml" parse="xml"/>
 
     <chapter>
       <title>Test snippets</title>
       <xi:include href="snippet://&servicemix-bean-source;/src/test/java/org/apache/servicemix/bean/beans/AnnotatedBean.java"/>
     </chapter>
-
   </part>
-
-
-
+  
   <appendix>
     <title>JBI Component XSD reference</title>
     <xi:include href="appendix/servicemix-bean.xml" parse="xml"/>

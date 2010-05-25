@@ -1,0 +1,24 @@
+h1. servicemix-scripting
+
+h2. Overview
+The ServiceMix Scripting component provides support for processing scripts using JSR-223 compliant scripting languages.
+
+The component is currently shipping with:
+* Groovy (1.5.6)
+* JRuby (1.1.2)
+* Rhino JavaScript (1.7R1)
+
+h3. Namespace and xbean.xml
+The namespace URI for the servicemix-bean JBI component is {{http://servicemix.apache.org/scripting/1.0}}.  This is an example of <filename>xbean.xml</filename> file with a namespace definition with prefix {{bean}}.
+{code}
+<beans xmlns:scripting="http://servicemix.apache.org/scripting/1.0">
+
+  <!-- add scripting:endpoint here -->
+
+</beans>
+{code}
+
+h3. Endpoint types
+The servicemix-scripting component defines a single endpoint type:
+- {{scripting:endpoint}} :: The scripting endpoint can be used to use scripts to handle exchanges or send new exchanges
+

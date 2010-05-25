@@ -1,0 +1,169 @@
+h1. servicemix-saxon
+
+h2. Overview
+The servicemix-saxon component is a standard JBI Service Engine for XSLT / XQuery. This component is based on Saxon and supports XSLT 2.0 and XPath 2.0, and XQuery 1.0.
+
+h3. Namespace and xbean.xml
+The namespace URI for the servicemix-bean JBI component is {{http://servicemix.apache.org/saxon/1.0}}.  This is an example of {{xbean.xml}} file with a namespace definition with prefix {{saxon}}.
+{code}
+    <beans xmlns:saxon="http://servicemix.apache.org/saxon  /1.0">
+
+      <!-- add saxon:xslt, saxon:xquery or saxon:proxy definitions here -->
+
+    </beans>
+{code}
+
+h3. Endpoint types
+The servicemix-saxon component defines these endpoints:
+- {{saxon:xslt}} :: Translates the in message content using XSLT to send back the translated content in the out message
+- {{saxon:proxy}} :: Acts as a proxy for an endpoint, translating the message passed to/from the endpoint using XSLT
+- {{saxon:xquery}} :: Use xquery to extract parts of the XML
+
+h2. Endpoint {{saxon:xslt}}
+
+The XSLT endpoint can be used to apply an XSLT stylesheet to the incoming exchange and will return the transformed result as the output message.
+
+Simple transformation:
+{code:lang=xml}
+<saxon:xslt service="test:xslt" endpoint="endpoint"
+            resource="classpath:transform.xsl" />
+{code}
+
+Dynamic stylesheet selection:
+{code:lang=xml}
+<saxon:xslt service="test:xslt-dynamic" endpoint="endpoint">
+  <saxon:expression>
+    <bean class="org.apache.servicemix.expression.PropertyExpression">
+      <property name="property" value="xslt.source" />
+    </bean>
+  </saxon:expression>
+</saxon:xslt>
+{code}
+
+|| Name || Type || Description || Required ||
+| resource | [Spring resource|http://springframework.org/docs/api/org/springframework/core/io/Resource.html] | the spring resource pointing to the XSLT stylesheet | one of (resource, expression) |
+| expression | [ServiceMix expression|http://incubator.apache.org/servicemix/dist/servicemix-3.0-incubating/site/servicemix-core/apidocs/org/apache/servicemix/expression/Expression.html] | expression used to dynamically load the stylesheet | one of (resource, expression) |
+| wsdlResource | [Spring resource|http://springframework.org/docs/api/org/springframework/core/io/Resource.html] | if set, the wsdl will be retrieved from the given Spring resource | no |
+| transformerFactory | TransformerFactory | TraX factory to create transformers | defaults to Saxon implementation |
+| configuration | [Saxon configuration|http://www.saxonica.com/documentation/javadoc/net/sf/saxon/Configuration.html] | Saxon configuration | no |
+| result | String | Output result type | defaults to {{dom}}, possible values are {{dom}}, {{bytes}}, {{string}} |
+| copyAttachments | boolean | | defaults to {{true}} |
+| copyProperties | boolean | | defaults to {{true}} |
+| copySubject | boolean | | defaults to {{true}} |
+| useDomSourceForXslt | boolean | force the transformation of the xslt stylesheet into a DOM document before giving it to the transformer | defaults to {{true}} |
+| useDomSourceForContent | boolean | force the transformation of the incoming JBI message into a DOM document before giving it to the transformer | no |
+| parameters | Map | additional parameters to give to the transformation engine | no |
+
+h3. Using properties and parameters
+
+All properties defined on the JBI exchange and input JBI message will be available for use inside the XSLT stylesheet as parameters.
+In addtion to those properties and the one specified in the {{parameters}} property on the endpoint, the following objects are also available:
+* exchange: the JBI exchange
+* in: the input JBI NormalizedMessage
+* component: the XsltEndpoint instance being called
+
+All those parameters can be accessed using XSLT standard ways.
+For example:
+{code:lang=xml}
+<xsl:stylesheet xmlns:xsl='http://www.w3.org/1999/XSL/Transform' version='1.0'>
+  <xsl:param name="stringParam"/>
+  <xsl:param name="integerParam"/>
+  ...
+</xsl:stylesheet>
+{code}
+
+and the configuration of those values on the endpoint (in case they are not available on the JBI exchange / message):
+{code:lang=xml}
+<saxon:xslt service="test:xslt-params" endpoint="endpoint"
+            resource="classpath:parameter-test.xsl">
+  <property name="parameters">
+    <map>
+      <entry key="stringParam" value="cheeseyCheese"/>
+      <entry key="integerParam">
+        <bean class="java.lang.Integer">
+          <constructor-arg index="0" value="4002"/>
+        </bean>
+      </entry>
+    </map>
+  </property>
+</saxon:xslt>
+{code}
+
+h2. Endpoint {{saxon:proxy}}
+
+One common use case is the need to transform a request coming from a service and send it to another service and do the same with the response.  A simple example is the need to translate the request and responses between two SOAP endpoints.  Such a use case could be implemented using two XSLT endpoints and an EIP StaticRoutingSlip.  However, there are some drawbacks, as the operation is lost in the process, and a static routing slip can not be used to process InOnly exchanges.
+
+The 4.0 version of servicemix-saxon provides such a feature in a single endpoint:
+
+{code:lang=xml}
+<saxon:proxy service="test:proxy" endpoint="endpoint"
+             resource="classpath:transform-in.xsl"
+             outResource="classpath:transform-out.xsl"
+             faultResource="classpath:transform-fault.xsl">
+  <saxon:target>
+    <saxon:exchange-target service="test:echo" />
+  </saxon:target>
+</saxon:proxy>
+{code}
+
+|| Name || Type || Description || Required ||
+| resource | [Spring resource|http://springframework.org/docs/api/org/springframework/core/io/Resource.html] | the spring resource pointing to the XSLT stylesheet used to transform the input message | no |
+| outResource | [Spring resource|http://springframework.org/docs/api/org/springframework/core/io/Resource.html] | the spring resource pointing to the XSLT stylesheet used to transform the output message | no |
+| faultResource | [Spring resource|http://springframework.org/docs/api/org/springframework/core/io/Resource.html] | the spring resource pointing to the XSLT stylesheet used to transform the fault message | no |
+| expression | [ServiceMix expression|http://incubator.apache.org/servicemix/dist/servicemix-3.0-incubating/site/servicemix-core/apidocs/org/apache/servicemix/expression/Expression.html] | expression used to dynamically load the stylesheet. If set, it will prevail against all resource, outResource and faultResource attributes | no |
+| wsdlResource | [Spring resource|http://springframework.org/docs/api/org/springframework/core/io/Resource.html] | if set, the wsdl will be retrieved from the given Spring resource | no |
+| transformerFactory | TransformerFactory | TraX factory to create transformers | defaults to Saxon implementation |
+| configuration | [Saxon configuration|http://www.saxonica.com/documentation/javadoc/net/sf/saxon/Configuration.html] | Saxon configuration | no |
+| result | String | Output result type | defaults to {{dom}}, possible values are {{dom}}, {{bytes}}, {{string}} |
+| copyAttachments | boolean | | defaults to {{true}} |
+| copyProperties | boolean | | defaults to {{true}} |
+| copySubject | boolean | | defaults to {{true}} |
+| target | ExchangeTarget | the destination where the transformed exchange will be sent to | yes |
+
+
+h2. Endpoint {{saxon:xquery}}
+
+The XQuery endpoint can be used to apply a selected XQuery to the input document.
+
+Simple XQuery:
+{code:lang=xml}
+<saxon:xquery service="test:xquery" endpoint="endpoint"
+              resource="classpath:query.xq" />
+{code}
+
+Inlined XQuery with specific output configuration:
+{code:lang=xml}
+<saxon:xquery service="test:xquery-inline" endpoint="endpoint">
+  <saxon:query>
+    for $x in /bookstore/book
+    where $x/price > 30
+    return $x/title
+  </saxon:query>
+  <saxon:outputProperties>
+    <saxon:property key="{http://saxon.sf.net/}wrap-result-sequence">yes</saxon:property>
+  </saxon:outputProperties>
+</saxon:xquery>
+{code}
+
+Dynamic selection of XQuery:
+{code:lang=xml}
+<saxon:xquery service="test:xquery-dynamic" endpoint="endpoint">
+  <saxon:expression>
+    <bean class="org.apache.servicemix.expression.PropertyExpression">
+      <property name="property" value="xquery.source" />
+    </bean>
+  </saxon:expression>
+</saxon:xquery>
+{code}
+
+|| Name || Type || Description || Required ||
+| query | String | inlined XQuery | one of (query, resource, expression) |
+| resource | [Spring resource|http://springframework.org/docs/api/org/springframework/core/io/Resource.html] | the spring resource pointing to the XQuery | one of (query, resource, expression) |
+| expression | [ServiceMix expression|http://incubator.apache.org/servicemix/dist/servicemix-3.0-incubating/site/servicemix-core/apidocs/org/apache/servicemix/expression/Expression.html] | expression used to dynamically load the xquery | one of (query, resource, expression) |
+| wsdlResource | [Spring resource|http://springframework.org/docs/api/org/springframework/core/io/Resource.html] | if set, the wsdl will be retrieved from the given Spring resource | no |
+| outputProperties | Map | Saxon specific output properties | no |
+| configuration | [Saxon configuration|http://www.saxonica.com/documentation/javadoc/net/sf/saxon/Configuration.html] | Saxon configuration | no |
+| result | String | Output result type | defaults to {{dom}}, possible values are {{dom}}, {{bytes}}, {{string}} |
+| copyAttachments | boolean | | defaults to {{true}} |
+| copyProperties | boolean | | defaults to {{true}} |
+| copySubject | boolean | | defaults to {{true}} |
