@@ -95,7 +95,7 @@
       <plugin>
         <groupId>com.agilejava.docbkx</groupId>
         <artifactId>docbkx-maven-plugin</artifactId>
-        <version>2.0.9</version>
+        <version>2.0.10</version>
         <executions>
 
           <execution>
@@ -105,17 +105,18 @@
             </goals>
             <phase>verify</phase>
             <configuration>
-              <htmlStylesheet>theme/master.css</htmlStylesheet>
+              <htmlStylesheet>resources/theme/master.css</htmlStylesheet>
               <chunkToc>false</chunkToc>
               <chunkedOutput>true</chunkedOutput>
               <postProcess>
-                <property name="theme" location="${project.build.directory}/site/html/theme"/>
-                <mkdir dir="${theme}"/>
-                <copy todir="${theme}">
-                  <fileset dir="${project.build.directory}/common/theme"/>
+                <property name="resources" location="${project.build.directory}/site/html/resources"/>
+                <mkdir dir="${resources}"/>
+                <copy todir="${resources}">
+                  <fileset dir="${project.build.directory}/common/resources"/>
                 </copy>
               </postProcess>
               <targetDirectory>${project.reporting.outputDirectory}/html</targetDirectory>
+              <htmlCustomization>${project.build.directory}/common/styles/docbook-html.xsl</htmlCustomization>
             </configuration>
           </execution>
 
@@ -126,16 +127,17 @@
             </goals>
             <phase>verify</phase>
             <configuration>
-              <htmlStylesheet>theme/master.css</htmlStylesheet>
+              <htmlStylesheet>resources/theme/master.css</htmlStylesheet>
               <chunkedOutput>false</chunkedOutput>
               <postProcess>
-                <property name="theme" location="${project.build.directory}/site/single/theme"/>
-                <mkdir dir="${theme}"/>
-                <copy todir="${theme}">
-                  <fileset dir="${project.build.directory}/common/theme"/>
+                <property name="resources" location="${project.build.directory}/site/single/resources"/>
+                <mkdir dir="${resources}"/>
+                <copy todir="${resources}">
+                  <fileset dir="${project.build.directory}/common/resources"/>
                 </copy>
               </postProcess>
               <targetDirectory>${project.reporting.outputDirectory}/single</targetDirectory>
+              <htmlCustomization>${project.build.directory}/common/styles/docbook-html.xsl</htmlCustomization>
             </configuration>
           </execution>
 
@@ -146,6 +148,9 @@
             </goals>
             <phase>verify</phase>
             <configuration>
+              <highlightSource>1</highlightSource>
+              <highlightDefaultLanguage>xml</highlightDefaultLanguage>
+              <hyphenateVerbatim>1</hyphenateVerbatim>
               <foCustomization>${project.build.directory}/common/styles/docbook-fo.xsl</foCustomization>
               <targetDirectory>${project.reporting.outputDirectory}/pdf</targetDirectory>
             </configuration>
@@ -167,15 +172,17 @@
 
         <dependencies>
           <dependency>
-            <groupId>org.docbook</groupId>
+            <groupId>net.sf.docbook</groupId>
             <artifactId>docbook-xml</artifactId>
-            <version>4.4</version>
+            <version>5.0-all</version>
+            <classifier>resources</classifier>
+            <type>zip</type>
             <scope>runtime</scope>
           </dependency>
           <dependency>
             <groupId>net.sf.xslthl</groupId>
             <artifactId>xslthl</artifactId>
-            <version>2.0.1</version>
+            <version>2.0.2</version>
           </dependency>
         </dependencies>
 

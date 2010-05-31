@@ -44,8 +44,7 @@
             </goals>
             <configuration>
               <includes>
-                <include>**/*.xsl</include>
-                <include>**/*.css</include>
+                <include>**</include>
               </includes>
             </configuration>
           </execution>

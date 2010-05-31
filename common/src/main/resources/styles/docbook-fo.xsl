@@ -29,6 +29,7 @@
                 version="1.0">
 
   <xsl:import href="urn:docbkx:stylesheet"/>
+  <xsl:import href="highlight-fo.xsl"/>  
 
   <!-- Prevent blank pages in output -->
   <xsl:template name="book.titlepage.before.verso">
@@ -362,7 +363,7 @@
                 colored and hyphenated links
       ################################################### -->
   <xsl:template match="ulink">
-    <fo:basic-link external-destination="{@url}"
+    <fo:basic-link external-destination="url({@url})"
                    xsl:use-attribute-sets="xref.properties"
                    text-decoration="underline"
                    color="blue">
