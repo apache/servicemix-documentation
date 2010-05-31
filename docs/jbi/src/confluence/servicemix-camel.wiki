@@ -7,7 +7,7 @@ h3. Namespace and camel-context.xml
 When creating a servicemix-camel service unit, we reuse the default Camel namespace {{http://camel.apache.org/schema/spring}}.
 
 This is an example {{camel-context.xml}} which uses the Spring DSL to define the Camel routes
-{code}
+{code:lang=xml}
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -27,7 +27,7 @@ This is an example {{camel-context.xml}} which uses the Spring DSL to define the
 {code}
 
 It is also possible to use the Java DSL inside a servicemix-camel service unit by referring to the package that contains the {{RouteBuilder}} classes.  An example: this {{camel-context.xml}} file will activate all routes defined by {{RouteBuilder}}s in the {{org.apache.servicemix.example.camel}} package.
-{code}
+{code:lang=xml}
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -48,12 +48,12 @@ h2. URI
 Camel routes use URIs to interact with the ESB.  You can use these URIs to expose new endpoints on the ESB as well as to send message exchanges to existing endpoints.
 
 The snippet below automatically exposes a new endpoint to the bus, where the service QName is {{{http://foo.bar.org}MyService}} and the endpoint name is {{MyEndpoint}}.
-{code}
+{code:lang=java}
 from("jbi:endpoint:http://foo.bar.org/MyService/MyEndpoint")
 {code}
 
 When a JBI endpoint appears at the end of a route, as in the example below, that will send 
-{code}
+{code:lang=java}
 to("jbi:endpoint:http://foo.bar.org/MyService/MyEndpoint")
 {code}
 
@@ -111,7 +111,7 @@ jbi:endpoint:urn:foo:bar:MyService:MyEndpoint?operation={http://www.mycompany.or
 h2. Example routes
 h3. Simple Spring route
 This simple Spring route registers a new endpoint on the ESB (service {{{urn:org:example}Router}}, endpoint name {{orders}}).  The message exchange contents will be logged and then forwarded to another JBI service endpoint (service {{{http://services.example.org}OrderService}})
-{code}
+{code:lang=xml}
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
@@ -133,7 +133,7 @@ This simple Spring route registers a new endpoint on the ESB (service {{{urn:org
 
 h3. The same route using the Java DSL
 When we implement the same route in the Java DSL, we first code our {{RouteBuilder}} implementation
-{code}
+{code:lang=java}
 package org.apache.servicemix.example;
 
 import org.apache.camel.builder.RouteBuilder;
@@ -150,7 +150,7 @@ public class JbiRouteBuilder extends RouteBuilder {
 {code}
 
 In our {{camel-context.xml}} file, we just refer to the {{org.apache.servicemix.example}} package that contains our {{JbiRouteBuilder}}.
-{code}
+{code:lang=xml}
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
@@ -178,8 +178,10 @@ h2. Special considerations
 h3. Stream handling
 If you are using a stream type as the message body, you should be aware that a stream is only capable of being read once. So if you enable {{DEBUG}} logging, the body is usually logged and thus read. To deal with this, Camel has a {{streamCaching}} option that can cache the stream, enabling you to read it multiple times.
 
-{code}
-from("jbi:endpoint:http://foo.bar.org/MyService/MyEndpoint").streamCaching().to("xslt:transform.xsl", "bean:doSomething");
+{code:lang=java}
+from("jbi:endpoint:http://foo.bar.org/MyService/MyEndpoint")
+  .streamCaching()
+  .to("xslt:transform.xsl", "bean:doSomething");
 {code}
 
 Camel will cache large input streams (by default, over 64K) in a {{temp}} file using {{CachedOutputStream}}. When you close the input stream, the temp file will be deleted.
