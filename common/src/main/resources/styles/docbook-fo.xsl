@@ -26,6 +26,8 @@
 ]>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:fo="http://www.w3.org/1999/XSL/Format"
+                xmlns:d="http://docbook.org/ns/docbook"
+                exclude-result-prefixes="d"
                 version="1.0">
 
   <xsl:import href="urn:docbkx:stylesheet"/>
@@ -221,7 +223,7 @@
 
   <!-- Why is the font-size for chapters hardcoded in the XSL FO templates?
    Let's remove it, so this sucker can use our attribute-set only... -->
-  <xsl:template match="title" mode="chapter.titlepage.recto.auto.mode">
+  <xsl:template match="d:title|title" mode="chapter.titlepage.recto.auto.mode">
     <fo:block xmlns:fo="http://www.w3.org/1999/XSL/Format"
               xsl:use-attribute-sets="chapter.titlepage.recto.style">
       <xsl:call-template name="component.title">
@@ -359,12 +361,14 @@
     <xsl:attribute name="space-after.maximum">0.1em</xsl:attribute>
   </xsl:attribute-set>
 
+  <!-- hide the link url from the contents of the page -->  
+  <xsl:param name="ulink.show">0</xsl:param>
+
   <!--###################################################
-                colored and hyphenated links
+              colored and hyphenated links
       ################################################### -->
-  <xsl:template match="ulink">
+  <xsl:template match="d:ulink|ulink">
     <fo:basic-link external-destination="url({@url})"
-                   xsl:use-attribute-sets="xref.properties"
                    text-decoration="underline"
                    color="blue">
       <xsl:choose>
