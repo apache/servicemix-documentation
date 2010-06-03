@@ -24,6 +24,14 @@
 
     <xsl:template name="user.head.content">
         <xsl:param name="node" select="."/>
+
+        <!--
+            NOTICE - SyntaxHighlighter (http://alexgorbatchev.com/wiki/SyntaxHighlighter) is licensed under LGPL v3
+
+            This script is being used to highlight the syntax of the <code/> blocks in our documentation.
+            You can disable the script by removing all the code between this NOTICE and END - SyntaxHighlighter.
+        -->
+
         <!-- Include *at least* the core style and default theme -->
         <link href="resources/syntaxhl/styles/shCore.css" rel="stylesheet" type="text/css" />
         <link href="resources/syntaxhl/styles/shThemeDefault.css" rel="Stylesheet" type="text/css" />
@@ -41,6 +49,8 @@
           SyntaxHighlighter.all()
           dp.SyntaxHighlighter.HighlightAll('programlisting');
         </script>
+
+        <!-- END - SyntaxHighlighter -->
 
     </xsl:template>
 
