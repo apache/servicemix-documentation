@@ -16,7 +16,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<chapter id="migrate"
+<appendix id="migrate"
          xmlns="http://docbook.org/ns/docbook"
          xmlns:xi="http://www.w3.org/2001/XInclude"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
@@ -26,4 +26,4 @@
          version="5.0" xml:lang="en">
 	<title>Migrate from ServiceMix3 to ServiceMix 4</title>
 	<para>TODO</para>
-</chapter>
+</appendix>

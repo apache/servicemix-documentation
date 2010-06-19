@@ -29,4 +29,8 @@
   <name>Apache ServiceMix :: Documentation :: Programmer's Manual</name>
   <description>The ServiceMix Programmer's Guide</description>
 
+  <properties>
+    <docbkx.start.page>manual.xml</docbkx.start.page>
+  </properties>
+
 </project>

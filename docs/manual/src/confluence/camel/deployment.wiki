@@ -1,0 +1,8 @@
+h1. Deploying Camel routes
+There are a few different ways to deploy Camel routes on ServiceMix 4:
+* deploy routes in a plain Spring XML file
+* deploy a bundle containing
+*# routes defined in a Spring XML file
+*# routes defined in the Java or Scala DSL
+
+  
