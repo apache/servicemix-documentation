@@ -101,6 +101,8 @@
 
         <!-- Chapter on installation and build -->
         <xi:include href="installation.xml"/>
+
+        <xi:include href="getting_started/technology_selection.wiki.xml"/>
     </part>
 
     <part>
@@ -119,6 +121,9 @@
 
     <part>
         <title>NMR</title>
+
+        <xi:include href="nmr/camel-nmr.wiki.xml"/>
+        <xi:include href="nmr/event-listeners.wiki.xml"/>
     </part>
 
     <part>
