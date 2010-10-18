@@ -21,6 +21,8 @@ limitations under the License.
 <html>
 <head>
   <link href="${uri("/theme/print.css")}" rel="Stylesheet" type="text/css" />
+  <link href="${uri("/theme/pygmentize.css")}" rel="stylesheet" type="text/css" />
+
   <title>${title}</title>
 </head>
 <body>

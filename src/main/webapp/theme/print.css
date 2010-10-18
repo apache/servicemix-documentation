@@ -1,6 +1,8 @@
 @page {
   @top { content: "Apache ServiceMix ${servicemix.version}" }
   @bottom { content: counter(page) }
+  margin: 50pt 50pt 50pt 50pt;
+  size: a4;
 }
 
 @page:first {
@@ -31,6 +33,11 @@ div#titlepage div#subtitle {
   font-size: 2em;
 }
 
-div#main {
+div.highlight pre {
+  font-family: 'Courier', Courier, monospace;
+  font-size: 1em;
+  background-color: #eee;
+  margin-left: 1em;
+  margin-right: 1em;
+  padding: .5em;
 }
-

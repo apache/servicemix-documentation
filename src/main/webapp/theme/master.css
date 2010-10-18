@@ -48,3 +48,17 @@ div#body {
 div#page {
   border: solid thin black;
 }
+
+div.highlight pre {
+  font-family: 'Courier', Courier, monospace;
+  font-size: 1em;
+  background-color: #eee;
+  margin-left: 1em;
+  margin-right: 1em;
+  padding: .5em;
+}
+
+tt {
+  font-family: 'Courier', Courier, monospace;
+  font-size: 1em;
+}
