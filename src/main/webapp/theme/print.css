@@ -40,4 +40,25 @@ div.highlight pre {
   margin-left: 1em;
   margin-right: 1em;
   padding: .5em;
+  page-break-inside: avoid;
+}
+
+h1 {
+  page-break-before: always;
+  counter-increment: h1;
+  counter-reset: h2;
+  margin-left: -20px;
+}
+
+h1::before {
+  content: counter(h1) ". ";
+}
+
+h2 {
+  counter-increment: h2;
+  margin-left: -20px;
+}
+
+h2::before {
+  content: counter(h1) "." counter(h2) ". ";
 }
