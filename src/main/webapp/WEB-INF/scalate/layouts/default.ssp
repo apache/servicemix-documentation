@@ -18,6 +18,8 @@ limitations under the License.
 <%@ var body: String %>
 <%@ var title: String = "Apache ServiceMix ${servicemix.version}" %>
 <%@ var navigation: Boolean = true %>
+<% import org.fusesource.scalate.servlet.ServletRenderContext._ %>
+<% import org.apache.servicemix.documentation.Helper._ %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,7 +55,7 @@ limitations under the License.
       <% if (navigation) { %>
       <nav>
         <div id="navigation">
-            ${include("/toc.ssp")}
+            ${include(toc(requestUri))}
         </div>
       </nav>
       <% } %>

@@ -15,12 +15,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package scalate
+package org.apache.servicemix.documentation
 
-import org.fusesource.scalate.util.Logging
+import org.apache.servicemix.documentation.Helper._
+import org.junit.Test
+import org.junit.Assert.{assertEquals}
 
-class Boot extends Logging {
+/**
+ * Test case for org.apache.servicemix.documentation.Helper
+ */
+class HelperTest {
 
-  def run = debug("Boot class started")
+  @Test
+  def testTocHelper = {
+    assertEquals("Should return valid TOC for /users-guide/index.conf",
+                 "/users-guide/toc.ssp", toc("/users-guide/index.conf"))
+  }
 
 }

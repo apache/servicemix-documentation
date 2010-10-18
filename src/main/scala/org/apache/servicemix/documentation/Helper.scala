@@ -15,12 +15,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package scalate
+package org.apache.servicemix.documentation
 
-import org.fusesource.scalate.util.Logging
+/**
+ * Helper methods for buildings the templates
+ */
+object Helper {
 
-class Boot extends Logging {
+  val TOC = "/toc.ssp"
 
-  def run = debug("Boot class started")
+  /**
+   * Determine the right toc file to include for a given uri
+   */
+  def toc(uri: String) = {
+    "/" + uri.substring(1).split("/").head + TOC
+  }
 
 }

@@ -1,0 +1,75 @@
+<ul>
+  <li id="karaf-users-guide">
+    <a href="#">User's Guide</a>
+    <ul>
+      <li id="karaf-installation">
+        <a href="${uri("/karaf/users-guide/installation.html")}">Installation</a>
+      </li>
+      <li id="karaf-directory-structure">
+        <a href="${uri("/karaf/users-guide/directory-structure.html")}">Directory structure</a>
+      </li>
+      <li id="karaf-starting-and-stopping">
+        <a href="${uri("/karaf/users-guide/start-stop.html")}">Starting and stopping Karaf</a>
+      </li>
+      <li id="using-console">
+        <a href="${uri("/karaf/users-guide/using-console.html")}">Using the console</a>
+      </li>
+      <li id="web-console">
+        <a href="${uri("/karaf/users-guide/web-console.html")}">Web console</a>
+      </li>
+      <li id="remote-console">
+        <a href="${uri("/karaf/users-guide/remote-console.html")}">Remote console</a>
+      </li>
+      <li id="child-instances">
+        <a href="${uri("/karaf/users-guide/child-instances.html")}">Child instances</a>
+      </li>
+      <li id="security">
+        <a href="${uri("/karaf/users-guide/security.html")}">Security</a>
+      </li>
+      <li id="failover">
+        <a href="${uri("/karaf/users-guide/failover.html")}">Failover deployments</a>
+      </li>
+      <li id="logging-system">
+        <a href="${uri("/karaf/users-guide/logging-system.html")}">Logging system</a>
+      </li>
+      <li id="installing-features">
+        <a href="${uri("/karaf/users-guide/installing-features.html")}">Installing additional features</a>
+      </li>
+      <li id="deployer">
+        <a href="${uri("/karaf/users-guide/deployer.html")}">Deployer</a>
+      </li>
+      <li id="configuration">
+        <a href="${uri("/karaf/users-guide/configuration.html")}">Configuration</a>
+      </li>
+      <li id="provisioning">
+        <a href="${uri("/karaf/users-guide/provisioning.html")}">Provisioning</a>
+      </li>
+    </ul>
+  </li>
+  <li id="karaf-developers-guide">
+    <a href="#">Developer's Guide</a>
+    <ul>
+      <li id="extending-console">
+        <a href="${uri("/karaf/developers-guide/extending-console.html")}">Extending Console</a>
+      </li>
+      <li id="security-framework">
+        <a href="${uri("/karaf/developers-guide/security-framework.html")}">Security Framework</a>
+      </li>
+      <li id="writing-tests">
+        <a href="${uri("/karaf/developers-guide/writing-tests.html")}">Tests with Pax Exam</a>
+      </li>
+      <li id="debugging">
+        <a href="${uri("/karaf/developers-guide/debugging.html")}">Debug Karaf</a>
+      </li>
+      <li id="creating-bundles">
+        <a href="${uri("/karaf/developers-guide/creating-bundles.html")}">Creating bundles</a>
+      </li>
+      <li id="connect-console">
+        <a href="${uri("/karaf/developers-guide/connect-console.html")}">Connect to the console</a>
+      </li>
+      <li id="shell-syntax">
+        <a href="${uri("/karaf/developers-guide/shell-syntax.html")}">Console shell syntax</a>
+      </li>
+    </ul>
+  </li>
+</ul>

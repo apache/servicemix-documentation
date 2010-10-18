@@ -5,6 +5,7 @@ If you're new to Apache ServiceMix, we recommend you start here
 
 <h2>Related projects' reference manuals</h2>
 <ul>
-  <li><a href="karaf/users-guide">Karaf Users' Guide</a></li>
-  <li><a href="karaf/developers-guide">Karaf Developers' Guide</a></li>
+  <li><a href="users-guide/index.html">Apache ServiceMix User's Guide</a></li>
+  <li><a href="commands/index.html">Console commands reference</a></li>
+  <li><a href="karaf/index.html">Apache Karaf</a></li>
 </ul>

@@ -68,6 +68,13 @@
       <artifactId>slf4j-api</artifactId>
       <version>1.6.0</version>
     </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.8</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
@@ -84,33 +91,54 @@
           </execution>
         </executions>
       </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
         <executions>
           <execution>
-            <id>src-dependencies</id>
+            <!-- Unpack the manual sources into the /karaf subdirectory -->
+            <id>unpack-karaf-manual</id>
             <phase>generate-resources</phase>
             <goals>
-              <!-- use copy-dependencies instead if you don't want to explode the sources -->
               <goal>unpack</goal>
             </goals>
-           <configuration>
-          <artifactItems>
-            <artifactItem>
-              <groupId>org.fusesource.doc</groupId>
-              <artifactId>karaf</artifactId>
-              <version>2.1.99-SNAPSHOT</version>
-              <type>war</type>
-              <outputDirectory>${project.build.directory}/webapp/karaf</outputDirectory>
-              <includes>commands/*.conf,developers-guide/*.conf,users-guide/*.conf</includes>
-            </artifactItem>
-          </artifactItems>
-
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>org.fusesource.doc</groupId>
+                  <artifactId>karaf</artifactId>
+                  <version>2.1.99-SNAPSHOT</version>
+                  <type>war</type>
+                  <outputDirectory>${project.build.directory}/webapp/karaf</outputDirectory>
+                  <includes>developers-guide/*.conf,users-guide/*.conf</includes>
+                </artifactItem>
+              </artifactItems>
             </configuration>
           </execution>
+          <execution>
+            <!-- Unpack the commands documentation sources into the /commands -->
+            <id>unpack-karaf-commands</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>unpack</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>org.fusesource.doc</groupId>
+                  <artifactId>karaf</artifactId>
+                  <version>2.1.99-SNAPSHOT</version>
+                  <type>war</type>
+                  <outputDirectory>${project.build.directory}/webapp</outputDirectory>
+                  <includes>commands/*.conf</includes>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>          
         </executions>
       </plugin>      
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
@@ -150,6 +178,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-war-plugin</artifactId>
+        <version>2.1</version>
         <configuration>
           <warSourceDirectory>${project.build.directory}/webapp</warSourceDirectory>
           <archive>
@@ -191,6 +220,7 @@
       <plugin>
         <groupId>org.apache.felix</groupId>
         <artifactId>maven-bundle-plugin</artifactId>
+        <version>2.1.0</version>
         <executions>
           <execution>
             <id>bundle-manifest</id>

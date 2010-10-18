@@ -1,0 +1,69 @@
+<!-- TODO: generate this file automatically, this is just a subset of the available commands for demo purposes -->
+<ul>
+  <li id="comfig-commands">
+    <a href="#">Using ConfigAdmin</a>
+    <ul>
+      <li id="config-cancel">
+        <a href="${uri("/commands/config-cancel.html")}">config:cancel</a>
+      </li>
+      <li id="config-edit">
+        <a href="${uri("/commands/config-edit.html")}">config:edit</a>
+      </li>
+      <li id="config-list">
+        <a href="${uri("/commands/config-list.html")}">config:list</a>
+      </li>
+      <li id="config-propappend">
+        <a href="${uri("/commands/config-propappend.html")}">config:propappend</a>
+      </li>
+      <li id="config-propdel">
+        <a href="${uri("/commands/config-propdel.html")}">config:propdel</a>
+      </li>
+      <li id="config-proplist">
+        <a href="${uri("/commands/config-proplist.html")}">config:proplist</a>
+      </li>
+      <li id="config-propset">
+        <a href="${uri("/commands/config-propset.html")}">config:propset</a>
+      </li>
+      <li id="config-update">
+        <a href="${uri("/commands/config-update.html")}">config:update</a>
+      </li>
+    </ul>
+  </li>
+  <li id="dev-commands">
+    <a href="#">Development</a>
+    <ul>
+      <li id="dev-dynamic-import">
+        <a href="${uri("/commands/dev-dynamic-import.html")}">dev:dynamic-import</a>
+      </li>
+      <li id="dev-framework">
+        <a href="${uri("/commands/dev-framework.html")}">dev:framework</a>
+      </li>
+      <li id="dev-print-stack-traces">
+        <a href="${uri("/commands/dev-print-stack-traces.html")}">dev:print-stack-traces</a>
+      </li>
+      <li id="dev-restart">
+        <a href="${uri("/commands/dev-restart.html")}">dev:restart</a>
+      </li>
+      <li id="dev-show-tree">
+        <a href="${uri("/commands/dev-show-tree.html")}">dev:show-tree</a>
+      </li>
+    </ul>
+  </li>
+  <li id="log-commands">
+    <a href="#">Logging</a>
+    <ul>
+      <li id="log-display-exception">
+        <a href="${uri("/commands/log-display-exception.html")}">log:display-exception</a>
+      </li>
+      <li id="log-display">
+        <a href="${uri("/commands/log-display.html")}">log:display</a>
+      </li>
+      <li id="log-get">
+        <a href="${uri("/commands/log-get.html")}">log:get</a>
+      </li>
+      <li id="log-set">
+        <a href="${uri("/commands/log-set.html")}">log:set</a>
+      </li>
+    </ul>
+  </li>
+</ul>
