@@ -86,6 +86,33 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>src-dependencies</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <!-- use copy-dependencies instead if you don't want to explode the sources -->
+              <goal>unpack</goal>
+            </goals>
+           <configuration>
+          <artifactItems>
+            <artifactItem>
+              <groupId>org.fusesource.doc</groupId>
+              <artifactId>karaf</artifactId>
+              <version>2.1.99-SNAPSHOT</version>
+              <type>war</type>
+              <outputDirectory>${project.build.directory}/webapp/karaf</outputDirectory>
+              <includes>commands/*.conf,developers-guide/*.conf,users-guide/*.conf</includes>
+            </artifactItem>
+          </artifactItems>
+
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
         <executions>
           <execution>
@@ -199,8 +226,8 @@
               <tasks>
                 <echo message="Generating PDF using Prince XML (http://www.princexml.com/)"/>
                 <exec executable="prince">
-                  <arg value="${project.build.directory}/sitegen/manual.html" />
-                  <arg value="${project.build.directory}/sitegen/manual.pdf" />
+                  <arg value="${project.build.directory}/sitegen/users-guide/manual.html" />
+                  <arg value="${project.build.directory}/sitegen/users-guide/manual.pdf" />
                   <arg value="--log"/>
                   <arg value="${project.build.directory}/prince.log"/>
                 </exec>
@@ -228,8 +255,9 @@
             <configuration>
               <artifacts>
                 <artifact>
-                  <file>${project.build.directory}/sitegen/manual.pdf</file>
+                  <file>${project.build.directory}/sitegen/users-guide/users-guide.pdf</file>
                   <type>pdf</type>
+                  <classifier>users-guide</classifier>
                 </artifact>
               </artifacts>
             </configuration>

@@ -1,0 +1,10 @@
+<% attributes("navigation") = false %>
+<h1>Welcome to the Apache ServiceMix documentation</h1>
+
+If you're new to Apache ServiceMix, we recommend you start here
+
+<h2>Related projects' reference manuals</h2>
+<ul>
+  <li><a href="karaf/users-guide">Karaf Users' Guide</a></li>
+  <li><a href="karaf/developers-guide">Karaf Developers' Guide</a></li>
+</ul>
