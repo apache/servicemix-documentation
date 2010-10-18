@@ -178,6 +178,7 @@
           </execution>
         </executions>
         <configuration>
+          <warSourceDirectory>${project.build.directory}/webapp</warSourceDirectory>
           <remoteServerId>people.apache.org</remoteServerId>
           <remoteServerUrl>scp://people.apache.org/www/servicemix.apache.org/docs/${servicemix.version}</remoteServerUrl>
         </configuration>

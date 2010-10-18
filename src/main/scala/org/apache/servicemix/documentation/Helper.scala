@@ -17,11 +17,14 @@
  */
 package org.apache.servicemix.documentation
 
+import org.fusesource.scalate.TemplateEngine
+
 /**
  * Helper methods for buildings the templates
  */
 object Helper {
 
+  val SITEGEN_ENGINE = "org.fusesource.scalate.maven.DummyTemplateEngine"
   val TOC = "/toc.ssp"
 
   /**
@@ -30,5 +33,10 @@ object Helper {
   def toc(uri: String) = {
     "/" + uri.substring(1).split("/").head + TOC
   }
+
+  /**
+   * Determine if the given engine is the scalate:sitegen TemplateEngine
+   */
+  def sitegen(engine: TemplateEngine) = (engine.getClass.getName == SITEGEN_ENGINE)
 
 }

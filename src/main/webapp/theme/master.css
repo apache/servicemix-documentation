@@ -62,3 +62,37 @@ tt {
   font-family: 'Courier', Courier, monospace;
   font-size: 1em;
 }
+
+div#bookpicker {
+  margin-left: -20em;
+  width: 700px;
+}
+
+div.left {
+  clear: both;
+  float: left;
+  text-align: right;
+  width: 200px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+div.left h2 {
+  color: #333333;
+}
+
+div.right {
+  float: right;
+  text-align: left;
+  width: 450px;
+  margin: auto;
+  color: #666666;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: .75em;
+}
+
+div.pdf {
+  padding-left: 20px;
+  background: url('images/pdf.png') no-repeat left center;
+}

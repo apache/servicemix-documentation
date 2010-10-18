@@ -1,11 +1,53 @@
+<% import org.apache.servicemix.documentation.Helper._ %>
 <% attributes("navigation") = false %>
-<h1>Welcome to the Apache ServiceMix documentation</h1>
 
-If you're new to Apache ServiceMix, we recommend you start here
+<div id="bookpicker">
 
-<h2>Related projects' reference manuals</h2>
-<ul>
-  <li><a href="users-guide/index.html">Apache ServiceMix User's Guide</a></li>
-  <li><a href="commands/index.html">Console commands reference</a></li>
-  <li><a href="karaf/index.html">Apache Karaf</a></li>
-</ul>
+<h1></h1>
+
+<div class="left">
+  <h2>Quickstart<br/>Guide</h2>
+</div>
+
+<div class="right">
+  If you're new to Apache ServiceMix, this document will guide you in your first steps in Apache ServiceMix.
+</div>
+
+<div class="left">
+  <a href="users-guide/index.html">
+    <h2>ServiceMix<br/>Manual</h2>
+  </a>
+</div>
+
+<div class="right">
+  The full reference manual, explaining about all the features and components in Apache ServiceMix
+  <% if (sitegen(engine)) { %>
+    <div class="pdf">
+      <a href="users-guide/manual.pdf" class="pdf">PDF document</a>
+    </div>
+  <% } %>
+</div>
+
+
+<div class="left">
+  <a href="karaf/index.html">
+    <h2>Karaf<br/>Manual</h2>
+  </a>
+</div>
+
+<div class="right">
+  Apache ServiceMix uses Apache Karaf as the underlying OSGi server runtime.  This manual will explain the features and functionality provided by Karaf.  
+</div>
+
+<div class="left">
+  <a href="commands/index.html">
+    <h2>Command Reference</h2>
+  </a>
+</div>
+
+<div class="right">
+  Help pages for all the available commands in the Apache ServiceMix console.
+</div>
+
+
+</div>

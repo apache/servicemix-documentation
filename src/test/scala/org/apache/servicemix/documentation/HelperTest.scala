@@ -19,7 +19,9 @@ package org.apache.servicemix.documentation
 
 import org.apache.servicemix.documentation.Helper._
 import org.junit.Test
-import org.junit.Assert.{assertEquals}
+import org.junit.Assert.{assertEquals,assertFalse,assertTrue}
+import org.fusesource.scalate.maven.DummyTemplateEngine
+import org.fusesource.scalate.TemplateEngine
 
 /**
  * Test case for org.apache.servicemix.documentation.Helper
@@ -30,6 +32,15 @@ class HelperTest {
   def testTocHelper = {
     assertEquals("Should return valid TOC for /users-guide/index.conf",
                  "/users-guide/toc.ssp", toc("/users-guide/index.conf"))
+  }
+
+  @Test
+  def testSitegen = {
+    assertTrue("DummyTemplateEngine is used in scalate:sitegen",
+               sitegen(new DummyTemplateEngine(List())))
+    assertFalse("Any other template engine means we're not in scalate:sitegen",
+                sitegen(new TemplateEngine()))
+
   }
 
 }
