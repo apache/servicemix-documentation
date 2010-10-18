@@ -1,6 +1,0 @@
-h1. servicemix-wsn2005
-
-h2. Overview
-The servicemix-wsn2005 is a standard JBI Service Engine which implements the WS-Notification specification from Oasis.
-
-

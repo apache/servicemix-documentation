@@ -114,7 +114,6 @@
           <execution>
             <goals>
               <goal>sitegen</goal>
-              <goal>precompile</goal>
             </goals>
             <configuration>
               <warSourceDirectory>${project.build.directory}/webapp</warSourceDirectory>

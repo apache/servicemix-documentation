@@ -27,6 +27,35 @@ limitations under the License.
   <script type="text/javascript" src="${uri("/scripts/jquery.cookie.js")}"></script>
   <script type="text/javascript" src="${uri("/scripts/jquery.jstree.js")}"></script>
 
+  <!--
+      NOTICE - SyntaxHighlighter (http://alexgorbatchev.com/wiki/SyntaxHighlighter) is licensed under LGPL v3
+
+      This script is being used to highlight the syntax of the <code/> blocks in our documentation.
+      You can disable the script by removing all the code between this NOTICE and END - SyntaxHighlighter.
+  -->
+
+  <!-- Include *at least* the core style and default theme -->
+  <link href="${uri("/scripts/syntaxhl/styles/shCore.css")}" rel="stylesheet" type="text/css" />
+  <link href="${uri("/scripts/syntaxhl/styles/shThemeDefault.css")}" rel="Stylesheet" type="text/css" />
+
+  <!-- Include required JS files -->
+  <script type="text/javascript" src="${uri("/scripts/syntaxhl/scripts/shCore.js")}"></script>
+  <script type="text/javascript" src="${uri("/scripts/syntaxhl/scripts/shLegacy.js")}"></script>
+
+  <!-- At least one brush, here we choose JS. You need to include a brush for every language you want to highlight -->
+  <script type="text/javascript" src="${uri("/scripts/syntaxhl/scripts/shBrushJava.js")}"></script>
+  <script type="text/javascript" src="${uri("/scripts/syntaxhl/scripts/shBrushXml.js")}"></script>
+
+  <!-- Finally, to actually run the highlighter, you need to include this JS on your page
+       TODO: This does not work at the moment because the class="brush: java" is missing from the generated HTML code -->
+  <script type="text/javascript">
+    SyntaxHighlighter.config.clipboardSwf = '${uri("/scripts/syntaxhl/scripts/clipboard.swf")}';
+    SyntaxHighlighter.all()
+    dp.SyntaxHighlighter.HighlightAll('code');
+  </script>
+
+  <!-- END - SyntaxHighlighter -->
+
   <script>
     $(document).ready(function(){
 	  $("#navigation").jstree({
