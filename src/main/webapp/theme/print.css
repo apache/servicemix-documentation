@@ -1,7 +1,13 @@
 @page {
-  @top { content: "Apache ServiceMix ${servicemix.version}" }
-  @bottom { content: counter(page) }
-  margin: 50pt 50pt 50pt 50pt;
+  @top {
+    content: "Apache ServiceMix ${servicemix.version}"; 
+    font-family:'Lucida Grande', Geneva, Verdana, Arial, sans-serif;
+  }
+  @bottom {
+    content: counter(page);
+    font-family:'Lucida Grande', Geneva, Verdana, Arial, sans-serif;
+  }
+  margin: 70pt 50pt 70pt 50pt;
   size: a4;
 }
 
@@ -35,8 +41,8 @@ div#titlepage div#subtitle {
 
 div.highlight pre {
   font-family: 'Courier', Courier, monospace;
-  font-size: 1em;
-  background-color: #eee;
+  font-size: .9em;
+  background-color: #ededed;
   margin-left: 1em;
   margin-right: 1em;
   padding: .5em;
@@ -61,4 +67,22 @@ h2 {
 
 h2::before {
   content: counter(h1) "." counter(h2) ". ";
+}
+
+table {
+  border-spacing: 0px 0px;
+  border: solid thin #777777;
+}
+
+table tr td {
+  border: solid thin #ededed;
+  padding: 2px;
+  font-size: .9em;
+}
+
+table tr th {
+  border: solid thin #ededed;
+  background-color: #ededed;  
+  padding: 2px;
+  font-size: .9em;
 }

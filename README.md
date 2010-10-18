@@ -1,8 +1,8 @@
 ## Prerequisites ##
 You need to have these two programs installed on your machine:
 
-- [Pygments] - syntax highlighting for HTML and PDF (http://pygments.org/)
-- [Prince XML] - converts HTML into PDF for the manual (http://www.princexml.com/)
+- [Pygments](http://pygments.org/) - syntax highlighting for HTML and PDF
+- [Prince XML](http://www.princexml.com/) - converts HTML into PDF for the manual 
 
 ## Building SNAPSHOT dependencies ##
 This project depends on a few SNAPSHOT dependencies.  Before you start working on the docs, you need to checkout and build these two projects locally:
