@@ -172,6 +172,7 @@
             <goals>
               <goal>sitegen</goal>
             </goals>
+            <phase>verify</phase>
             <configuration>
               <warSourceDirectory>${project.build.directory}/webapp</warSourceDirectory>
             </configuration>
@@ -265,7 +266,7 @@
         <version>1.2</version>
         <executions>
           <execution>
-            <id>preprocess</id>
+            <id>generate-pdf</id>
             <configuration>
               <tasks>
                 <echo message="Generating PDF using Prince XML (http://www.princexml.com/)"/>
@@ -299,7 +300,7 @@
             <configuration>
               <artifacts>
                 <artifact>
-                  <file>${project.build.directory}/sitegen/users-guide/users-guide.pdf</file>
+                  <file>${project.build.directory}/sitegen/users-guide/manual.pdf</file>
                   <type>pdf</type>
                   <classifier>users-guide</classifier>
                 </artifact>
