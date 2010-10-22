@@ -18,6 +18,7 @@ limitations under the License.
 <%@ var body: String %>
 <%@ var title: String = "Apache ServiceMix ${servicemix.version}" %>
 <%@ var navigation: Boolean = true %>
+<% escapeMarkup = false %>
 <% import org.fusesource.scalate.servlet.ServletRenderContext._ %>
 <% import org.apache.servicemix.documentation.Helper._ %>
 <!DOCTYPE html>

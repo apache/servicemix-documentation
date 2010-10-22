@@ -28,6 +28,20 @@
   <% } %>
 </div>
 
+<div class="left">
+  <a href="jbi/index.html">
+    <h2>ServiceMix<br/>JBI Manual</h2>
+  </a>
+</div>
+
+<div class="right">
+  Information about the JBI (Java Business Integration) support in Apache ServiceMix and a description for all the JBI components.
+  <% if (sitegen(engine)) { %>
+    <div class="pdf">
+      <a href="jbi/jbi-guide.pdf" class="pdf">PDF document</a>
+    </div>
+  <% } %>
+</div>
 
 <div class="left">
   <a href="karaf/index.html">

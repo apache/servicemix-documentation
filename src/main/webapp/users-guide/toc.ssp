@@ -22,31 +22,6 @@
             <li id="nmr-event-listeners"><a href="${uri("/users-guide/nmr/nmr-event-listeners.html")}">Event Listeners</a></li>
         </ul>
     </li>
-    <li id="jbi-components">
-        <a href="#">JBI Components</a>
-        <ul>
-            <li id="servicemix-bean"><a href="${uri("/users-guide/jbi/servicemix-bean.html")}">servicemix-bean</a></li>
-            <li id="servicemix-camel"><a href="${uri("/users-guide/jbi/servicemix-camel.html")}">servicemix-camel</a></li>
-            <li id="servicemix-cxf-bc"><a href="${uri("/users-guide/jbi/servicemix-cxf-bc.html")}">servicemix-cxf-bc</a></li>
-            <li id="servicemix-cxf-se"><a href="${uri("/users-guide/jbi/servicemix-cxf-se.html")}">servicemix-cxf-se</a></li>
-            <li id="servicemix-drools"><a href="${uri("/users-guide/jbi/servicemix-drools.html")}">servicemix-drools</a></li>
-            <li id="servicemix-eip"><a href="${uri("/users-guide/jbi/servicemix-eip.html")}">servicemix-eip</a></li>
-            <li id="servicemix-file"><a href="${uri("/users-guide/jbi/servicemix-file.html")}">servicemix-file</a></li>
-            <li id="servicemix-ftp"><a href="${uri("/users-guide/jbi/servicemix-ftp.html")}">servicemix-ftp</a></li>
-            <li id="servicemix-http"><a href="${uri("/users-guide/jbi/servicemix-http.html")}">servicemix-http</a></li>
-            <li id="servicemix-jms"><a href="${uri("/users-guide/jbi/servicemix-jms.html")}">servicemix-jms</a></li>
-            <li id="servicemix-mail"><a href="${uri("/users-guide/jbi/servicemix-mail.html")}">servicemix-mail</a></li>
-            <li id="servicemix-osworkflow"><a href="${uri("/users-guide/jbi/servicemix-osworkflow.html")}">servicemix-osworkflow</a></li>
-            <li id="servicemix-quartz"><a href="${uri("/users-guide/jbi/servicemix-quartz.html")}">servicemix-quartz</a></li>
-            <li id="servicemix-saxon"><a href="${uri("/users-guide/jbi/servicemix-saxon.html")}">servicemix-saxon</a></li>
-            <li id="servicemix-scripting"><a href="${uri("/users-guide/jbi/servicemix-scripting.html")}">servicemix-scripting</a></li>
-            <li id="servicemix-snmp"><a href="${uri("/users-guide/jbi/servicemix-snmp.html")}">servicemix-snmp</a></li>
-            <li id="servicemix-validation"><a href="${uri("/users-guide/jbi/servicemix-validation.html")}">servicemix-validation</a></li>
-            <li id="servicemix-vfs"><a href="${uri("/users-guide/jbi/servicemix-vfs.html")}">servicemix-vfs</a></li>
-            <li id="servicemix-wsn2005"><a href="${uri("/users-guide/jbi/servicemix-wsn2005.html")}">servicemix-wsn2005</a></li>
-            <li id="servicemix-xmpp"><a href="${uri("/users-guide/jbi/servicemix-xmpp.html")}">servicemix-xmpp</a></li>
-        </ul>
-    </li>
     <li id="appendices">
         <a href="#">Appendices</a>
         <ul>

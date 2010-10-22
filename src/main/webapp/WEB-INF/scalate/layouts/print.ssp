@@ -17,6 +17,7 @@ limitations under the License.
 --%>
 <%@ var body: String %>
 <%@ var title: String = "Apache ServiceMix ${servicemix.version}" %>
+<% escapeMarkup = false %>
 <!DOCTYPE html>
 <html>
 <head>

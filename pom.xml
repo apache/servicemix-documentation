@@ -261,6 +261,7 @@
           </instructions>
         </configuration>
       </plugin>
+      
       <plugin>
         <artifactId>maven-antrun-plugin</artifactId>
         <version>1.2</version>
@@ -269,13 +270,8 @@
             <id>generate-pdf</id>
             <configuration>
               <tasks>
-                <echo message="Generating PDF using Prince XML (http://www.princexml.com/)"/>
-                <exec executable="prince">
-                  <arg value="${project.build.directory}/sitegen/users-guide/manual.html" />
-                  <arg value="${project.build.directory}/sitegen/users-guide/manual.pdf" />
-                  <arg value="--log"/>
-                  <arg value="${project.build.directory}/prince.log"/>
-                </exec>
+                <ant antfile="${project.basedir}/src/main/ant/generate-pdfs.xml"
+                     dir="${project.basedir}"/>
             </tasks>
             </configuration>
             <goals>
@@ -304,6 +300,11 @@
                   <type>pdf</type>
                   <classifier>users-guide</classifier>
                 </artifact>
+                <artifact>
+                  <file>${project.build.directory}/sitegen/jbi/jbi-guide.pdf</file>
+                  <type>pdf</type>
+                  <classifier>jbi-guide</classifier>
+                </artifact>                
               </artifacts>
             </configuration>
           </execution>
@@ -322,6 +323,34 @@
       </properties>
     </profile>
   </profiles>
+
+  <!-- Scalate snapshots -->
+  <repositories>
+    <repository>
+      <id>fusesource.snapshots</id>
+      <url>http://repo.fusesource.com/nexus/content/groups/public-snapshots</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
+  <!-- Scalate snapshots -->
+  <pluginRepositories>
+    <pluginRepository>
+      <id>fusesource.snapshots</id>
+      <url>http://repo.fusesource.com/nexus/content/groups/public-snapshots</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>      
+    </pluginRepository>
+  </pluginRepositories>
 
 </project>
 
