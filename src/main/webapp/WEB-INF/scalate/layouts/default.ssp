@@ -50,8 +50,6 @@ limitations under the License.
       ${title}
     </header>
 
-
-
     <div id="main">
       <% if (navigation) { %>
       <nav>
