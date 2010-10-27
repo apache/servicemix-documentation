@@ -35,6 +35,7 @@ div#titlepage div#title {
 }
 
 div#titlepage div#subtitle {
+  margin-top: 2em;
   text-align: right;
   font-size: 2em;
 }
@@ -72,6 +73,7 @@ h2::before {
 table {
   border-spacing: 0px 0px;
   border: solid thin #777777;
+  width: 100%;
 }
 
 table tr td {

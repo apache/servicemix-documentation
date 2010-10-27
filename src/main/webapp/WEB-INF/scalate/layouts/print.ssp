@@ -16,7 +16,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 --%>
 <%@ var body: String %>
-<%@ var title: String = "Apache ServiceMix ${servicemix.version}" %>
+<%@ var title: String = "Manual" %>
 <% escapeMarkup = false %>
 <!DOCTYPE html>
 <html>
@@ -28,8 +28,11 @@ limitations under the License.
 </head>
 <body>
   <div id="titlepage">
-    <div id="title">Apache ServiceMix</div>
-    <div id="subtitle">Version ${servicemix.version}</div>
+    <div id="title"><%= title %></div>
+    <div id="subtitle">
+      Apache ServiceMix <br/>
+      Version ${servicemix.version}
+    </div>
   </div>
   <div id="main">
     <%= body %>

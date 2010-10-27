@@ -41,8 +41,47 @@ footer p {
 }
 
 div#body {
-  padding-left: 22.5em;
+  padding-left: 23.5em;
   margin-bottom: 30px;
+}
+
+div#body h2 {
+  margin-left: -1em;
+  padding-top: 10px;
+}
+
+div#body h3 {
+  padding-top: 20px;
+  margin-left: -1em;
+}
+
+div#body h4 {
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+div#body table tr {
+  border: solid thin black;
+}
+
+div#body table {
+  border-spacing: 0px 0px;
+  border: solid thin #777777;
+  margin-left: 1em;
+  width: 90%
+}
+
+div#body table tr td {
+  border: solid thin #ededed;
+  padding: 2px;
+  font-size: .9em;
+}
+
+div#body table tr th {
+  border: solid thin #ededed;
+  background-color: #ededed;
+  padding: 2px;
+  font-size: .9em;
 }
 
 div#page {
@@ -56,6 +95,8 @@ div.highlight pre {
   margin-left: 1em;
   margin-right: 1em;
   padding: .5em;
+  margin-top: .5em;
+  margin-bottom: .5em;
 }
 
 tt {

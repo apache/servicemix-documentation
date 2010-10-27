@@ -26,7 +26,7 @@ limitations under the License.
 <head>
   <title>${title}</title>
 
-  <link href="${uri("/theme/master.css")}" rel="Stylesheet" type="text/css" />
+  <link href="${uri("/theme/master.css")}" rel="stylesheet" type="text/css" />
   <link href="${uri("/theme/pygmentize.css")}" rel="stylesheet" type="text/css" />
 
   <script type="text/javascript" src="${uri("/scripts/jquery.js")}"></script>
