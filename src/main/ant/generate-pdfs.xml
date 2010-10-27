@@ -28,14 +28,15 @@
     <attribute name="input" default="${sitegen}/@{document}.html"/>
     <attribute name="output" default="${sitegen}/@{document}.pdf"/>
     <sequential>
-      <echo message="Running Prince XML (http://princexml.com) on @{input}" />
-      <exec executable="prince">
+      <echo message="Running Prince XML (http://princexml.com)" />
+      <echo message=" converting @{input}"/>
+      <echo message="       into @{output}"/>
+      <exec executable="prince" failifexecutionfails="${pdf.required}">
         <arg value="@{input}" />
         <arg value="@{output}" />
         <arg value="--log"/>
         <arg value="${target}/prince.log"/>
       </exec>
-      <echo  message="Successfully created @{output}"/>      
     </sequential>
   </macrodef>
 

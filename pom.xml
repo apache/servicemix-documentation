@@ -44,6 +44,9 @@
     <webapp.dir>${project.build.directory}/webapp</webapp.dir>
 
     <maven.wagon.version>1.0-beta-6</maven.wagon.version>
+
+    <pdf.required>false</pdf.required>
+
     <scalate.version>1.4-SNAPSHOT</scalate.version>
     <scalate.mode>production</scalate.mode>
     <scalate.workdir>${basedir}/target/scalateWorkDir</scalate.workdir>
@@ -274,42 +277,15 @@
             <configuration>
               <tasks>
                 <ant antfile="${project.basedir}/src/main/ant/generate-pdfs.xml"
-                     dir="${project.basedir}"/>
+                     dir="${project.basedir}">
+                  <property name="pdf.required" value="${pdf.required}"/>
+                </ant>
             </tasks>
             </configuration>
             <goals>
               <goal>run</goal>
             </goals>
             <phase>package</phase>
-          </execution>
-        </executions>
-      </plugin>
-
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>build-helper-maven-plugin</artifactId>
-        <version>1.5</version>
-        <executions>
-          <execution>
-            <id>attach-artifacts</id>
-            <phase>verify</phase>
-            <goals>
-              <goal>attach-artifact</goal>
-            </goals>
-            <configuration>
-              <artifacts>
-                <artifact>
-                  <file>${project.build.directory}/sitegen/users-guide/manual.pdf</file>
-                  <type>pdf</type>
-                  <classifier>users-guide</classifier>
-                </artifact>
-                <artifact>
-                  <file>${project.build.directory}/sitegen/jbi/jbi-guide.pdf</file>
-                  <type>pdf</type>
-                  <classifier>jbi-guide</classifier>
-                </artifact>                
-              </artifacts>
-            </configuration>
           </execution>
         </executions>
       </plugin>
@@ -344,6 +320,48 @@
       </snapshots>      
     </pluginRepository>
   </pluginRepositories>
+
+
+    <profiles>
+        <profile>
+            <id>apache-release</id>
+            <properties>
+                <pdf.required>true</pdf.required>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>build-helper-maven-plugin</artifactId>
+                        <version>1.5</version>
+                        <executions>
+                            <execution>
+                                <id>attach-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>attach-artifact</goal>
+                                </goals>
+                                <configuration>
+                                    <artifacts>
+                                        <artifact>
+                                            <file>${project.build.directory}/sitegen/users-guide/manual.pdf</file>
+                                            <type>pdf</type>
+                                            <classifier>users-guide</classifier>
+                                        </artifact>
+                                        <artifact>
+                                            <file>${project.build.directory}/sitegen/jbi/jbi-guide.pdf</file>
+                                            <type>pdf</type>
+                                            <classifier>jbi-guide</classifier>
+                                        </artifact>
+                                    </artifacts>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
 </project>
 
