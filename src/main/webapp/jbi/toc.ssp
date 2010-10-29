@@ -23,6 +23,7 @@
             <li id="servicemix-cxf-se"><a href="${uri("/jbi/components/servicemix-cxf-se.html")}">servicemix-cxf-se</a></li>
             <li id="servicemix-drools"><a href="${uri("/jbi/components/servicemix-drools.html")}">servicemix-drools</a></li>
             <li id="servicemix-eip"><a href="${uri("/jbi/components/servicemix-eip.html")}">servicemix-eip</a></li>
+            <li id="servicemix-exec"><a href="${uri("/jbi/components/servicemix-exec.html")}">servicemix-exec</a></li>
             <li id="servicemix-file"><a href="${uri("/jbi/components/servicemix-file.html")}">servicemix-file</a></li>
             <li id="servicemix-ftp"><a href="${uri("/jbi/components/servicemix-ftp.html")}">servicemix-ftp</a></li>
             <li id="servicemix-http"><a href="${uri("/jbi/components/servicemix-http.html")}">servicemix-http</a></li>
