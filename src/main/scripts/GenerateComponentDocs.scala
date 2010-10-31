@@ -27,11 +27,12 @@ def run() = {
   outputDirectory.mkdirs
   
   Array("servicemix-bean", "servicemix-cxf-bc", "servicemix-cxf-se",
-        "servicemix-drools", "servicemix-eip", "servicemix-file",
-        "servicemix-ftp", "servicemix-http", "servicemix-jms",
-        "servicemix-mail", "servicemix-osworkflow", "servicemix-quartz",
-        "servicemix-saxon", "servicemix-scripting", "servicemix-snmp",
-        "servicemix-validation", "servicemix-vfs", "servicemix-xmpp").foreach(generateDocumentation)
+        "servicemix-drools", "servicemix-eip", "servicemix-exec",
+        "servicemix-file", "servicemix-ftp", "servicemix-http",
+        "servicemix-jms", "servicemix-mail", "servicemix-osworkflow",
+        "servicemix-quartz", "servicemix-saxon", "servicemix-scripting",
+        "servicemix-snmp", "servicemix-validation", "servicemix-vfs",
+        "servicemix-xmpp").foreach(generateDocumentation)
 }
 
 def generateDocumentation(component: String) {
