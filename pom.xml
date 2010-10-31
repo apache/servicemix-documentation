@@ -51,6 +51,7 @@
     <scalate.mode>production</scalate.mode>
     <scalate.workdir>${basedir}/target/scalateWorkDir</scalate.workdir>
 
+    <components.version>2010.02-SNAPSHOT</components.version>
     <karaf.version>2.1.99-SNAPSHOT</karaf.version>
     <servicemix.version>4.3.0-SNAPSHOT</servicemix.version>
   </properties>
@@ -78,6 +79,134 @@
       <version>1.6.0</version>
     </dependency>
 
+      <!-- ensure that the components are available in the local repo -->
+      <dependency>
+          <groupId>org.apache.servicemix</groupId>
+          <artifactId>servicemix-bean</artifactId>
+          <version>${components.version}</version>
+          <scope>provided</scope>
+          <optional>true</optional>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.servicemix</groupId>
+          <artifactId>servicemix-cxf-bc</artifactId>
+          <version>${components.version}</version>
+          <scope>provided</scope>
+          <optional>true</optional>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.servicemix</groupId>
+          <artifactId>servicemix-cxf-se</artifactId>
+          <version>${components.version}</version>
+          <scope>provided</scope>
+          <optional>true</optional>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.servicemix</groupId>
+          <artifactId>servicemix-drools</artifactId>
+          <version>${components.version}</version>
+          <scope>provided</scope>
+          <optional>true</optional>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.servicemix</groupId>
+          <artifactId>servicemix-eip</artifactId>
+          <version>${components.version}</version>
+          <scope>provided</scope>
+          <optional>true</optional>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.servicemix</groupId>
+          <artifactId>servicemix-file</artifactId>
+          <version>${components.version}</version>
+          <scope>provided</scope>
+          <optional>true</optional>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.servicemix</groupId>
+          <artifactId>servicemix-ftp</artifactId>
+          <version>${components.version}</version>
+          <scope>provided</scope>
+          <optional>true</optional>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.servicemix</groupId>
+          <artifactId>servicemix-http</artifactId>
+          <version>${components.version}</version>
+          <scope>provided</scope>
+          <optional>true</optional>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.servicemix</groupId>
+          <artifactId>servicemix-jms</artifactId>
+          <version>${components.version}</version>
+          <scope>provided</scope>
+          <optional>true</optional>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.servicemix</groupId>
+          <artifactId>servicemix-mail</artifactId>
+          <version>${components.version}</version>
+          <scope>provided</scope>
+          <optional>true</optional>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.servicemix</groupId>
+          <artifactId>servicemix-osworkflow</artifactId>
+          <version>${components.version}</version>
+          <scope>provided</scope>
+          <optional>true</optional>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.servicemix</groupId>
+          <artifactId>servicemix-quartz</artifactId>
+          <version>${components.version}</version>
+          <scope>provided</scope>
+          <optional>true</optional>
+      </dependency>      
+      <dependency>
+          <groupId>org.apache.servicemix</groupId>
+          <artifactId>servicemix-saxon</artifactId>
+          <version>${components.version}</version>
+          <scope>provided</scope>
+          <optional>true</optional>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.servicemix</groupId>
+          <artifactId>servicemix-scripting</artifactId>
+          <version>${components.version}</version>
+          <scope>provided</scope>
+          <optional>true</optional>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.servicemix</groupId>
+          <artifactId>servicemix-snmp</artifactId>
+          <version>${components.version}</version>
+          <scope>provided</scope>
+          <optional>true</optional>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.servicemix</groupId>
+          <artifactId>servicemix-validation</artifactId>
+          <version>${components.version}</version>
+          <scope>provided</scope>
+          <optional>true</optional>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.servicemix</groupId>
+          <artifactId>servicemix-vfs</artifactId>
+          <version>${components.version}</version>
+          <scope>provided</scope>
+          <optional>true</optional>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.servicemix</groupId>
+          <artifactId>servicemix-xmpp</artifactId>
+          <version>${components.version}</version>
+          <scope>provided</scope>
+          <optional>true</optional>
+      </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -94,9 +223,21 @@
         <version>2.14.1</version>
         <executions>
           <execution>
+            <id>compile</id>
             <goals>
               <goal>compile</goal>
             </goals>
+          </execution>
+          <execution>
+            <id>generate-components-docs</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>script</goal>
+            </goals>
+            <configuration>
+              <includeScopes>plugin</includeScopes>
+              <scriptFile>src/main/scripts/GenerateComponentDocs.scala</scriptFile>
+            </configuration>
           </execution>
         </executions>
       </plugin>
