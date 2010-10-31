@@ -22,6 +22,14 @@
             <li id="nmr-event-listeners"><a href="${uri("/users-guide/nmr/nmr-event-listeners.html")}">Event Listeners</a></li>
         </ul>
     </li>
+
+    <li id="activemq">
+        <a href="${uri("/users-guide/activemq/activemq-index.html")}">Using ActiveMQ</a>
+         <ul>
+            <li id="activemq-camel-example"><a href="${uri("/users-guide/activemq/activemq-camel-example.html")}">Using ActiveMQ with Camel</a></li>
+         </ul>
+    </li>
+
     <li id="appendices">
         <a href="#">Appendices</a>
         <ul>
