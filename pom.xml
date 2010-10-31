@@ -117,6 +117,13 @@
       </dependency>
       <dependency>
           <groupId>org.apache.servicemix</groupId>
+          <artifactId>servicemix-exec</artifactId>
+          <version>${components.version}</version>
+          <scope>provided</scope>
+          <optional>true</optional>
+      </dependency>      
+      <dependency>
+          <groupId>org.apache.servicemix</groupId>
           <artifactId>servicemix-file</artifactId>
           <version>${components.version}</version>
           <scope>provided</scope>
