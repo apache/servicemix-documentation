@@ -1,0 +1,40 @@
+div#bookpicker {
+  width: 90%;
+  }
+
+div#bookpicker a {
+  text-decoration: none;
+  }
+  
+div.left h1, div.left h2 {
+  overflow: visible;
+  border-bottom: none;
+  margin: 0;
+  padding: 0;
+}
+  
+  div.left {
+  float:left;
+  width:30%;
+  text-align:right;
+  clear:both;
+  padding-bottom: 10px;
+}
+
+div.left h2 {
+  color: #5C5C5C;
+  font-size: 14pt;
+  margin-right: 20px;
+}
+
+div.right {
+  float:right;
+  width:70%;
+  text-align:left;
+  padding-bottom: 10px;
+  }
+
+div.pdf {
+  padding-left: 20px;
+  background: url('images/pdf.png') no-repeat left center;
+}

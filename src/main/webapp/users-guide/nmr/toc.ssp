@@ -1,0 +1,10 @@
+<ul>
+    <li id="nmr">
+
+        <a href="/users-guide/nmr/index.html">Using the NMR</a>
+        <ul>
+            <li id="camel-nmr"><a href="/users-guide/nmr/nmr-camel.html">Camel NMR</a></li>
+            <li id="nmr-event-listeners"><a href="/users-guide/nmr/nmr-event-listeners.html">Event Listeners</a></li>
+        </ul>
+    </li>
+</ul>

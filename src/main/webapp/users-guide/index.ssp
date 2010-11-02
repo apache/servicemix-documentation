@@ -1,0 +1,64 @@
+<% import org.apache.servicemix.documentation.Helper._ %>
+<% attributes("title") = "User Guides" %>
+<% attributes("navigation") = false %>
+<% attributes("style") = uri("/theme/picker.css") %>
+<div id="bookpicker">
+
+<div class="left">
+  <a href="getting-started/index"><h2>Getting Started</h2></a>
+</div>
+
+<div class="right">
+  <p>This guide will get you familiar with Apache ServiceMix.</p>
+  <% if (sitegen(engine)) { %>
+    <div class="pdf">
+      <a href="getting-started/manual.pdf" class="pdf">PDF document</a>
+    </div>
+  <% } %>
+</div>
+
+<div class="left">
+  <a href="camel/index.html">
+    <h2>Using Camel</h2>
+  </a>
+</div>
+
+<div class="right">
+  <p>Guide to using Apache Camel for data mediation in Apache ServiceMix.</p>
+  <% if (sitegen(engine)) { %>
+    <div class="pdf">
+      <a href="camel/manual.pdf" class="pdf">PDF document</a>
+    </div>
+  <% } %>
+</div>
+
+<div class="left">
+  <a href="nmr/index.html">
+    <h2>Using the NMR</h2>
+  </a>
+</div>
+
+<div class="right">
+  <p>Guide to using the Apache ServiceMix NMR to move messages between endpoints inside the ESB.</p>
+  <% if (sitegen(engine)) { %>
+    <div class="pdf">
+      <a href="nmr/manual.pdf" class="pdf">PDF document</a>
+    </div>
+  <% } %>
+</div>
+
+<div class="left">
+  <a href="migration/index.html">
+    <h2>Migration Guide</h2>
+  </a>
+</div>
+
+<div class="right">
+  <p>Information in migrating to the latest version of Apache ServiceMix.</p>
+  <% if (sitegen(engine)) { %>
+    <div class="pdf">
+      <a href="migration/manual.pdf" class="pdf">PDF document</a>
+    </div>
+  <% } %>
+</div>
+</div>

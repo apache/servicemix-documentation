@@ -1,41 +1,35 @@
 <% import org.apache.servicemix.documentation.Helper._ %>
+<% attributes("title") = "Home" %>
 <% attributes("navigation") = false %>
-
+<% attributes("style") = uri("/theme/picker.css") %>
 <div id="bookpicker">
 
-<h1></h1>
-
 <div class="left">
-  <h2>Quickstart<br/>Guide</h2>
+  <h2>Quickstart Guide</h2>
 </div>
 
 <div class="right">
-  If you're new to Apache ServiceMix, this document will guide you in your first steps in Apache ServiceMix.
+  <p>If you're new to Apache ServiceMix, this document will guide you in your first steps in Apache ServiceMix.</p>
 </div>
 
 <div class="left">
   <a href="users-guide/index.html">
-    <h2>ServiceMix<br/>Manual</h2>
+    <h2>User Guides</h2>
   </a>
 </div>
 
 <div class="right">
-  The full reference manual, explaining about all the features and components in Apache ServiceMix
-  <% if (sitegen(engine)) { %>
-    <div class="pdf">
-      <a href="users-guide/manual.pdf" class="pdf">PDF document</a>
-    </div>
-  <% } %>
+  <p>Guides explaining all of the features and components in Apache ServiceMix.</p>
 </div>
 
 <div class="left">
   <a href="jbi/index.html">
-    <h2>ServiceMix<br/>JBI Manual</h2>
+    <h2>ServiceMix JBI Manual</h2>
   </a>
 </div>
 
 <div class="right">
-  Information about the JBI (Java Business Integration) support in Apache ServiceMix and a description for all the JBI components.
+  <p>Information about the JBI (Java Business Integration) support in Apache ServiceMix and a description for all the JBI components.</p>
   <% if (sitegen(engine)) { %>
     <div class="pdf">
       <a href="jbi/jbi-guide.pdf" class="pdf">PDF document</a>
@@ -45,12 +39,12 @@
 
 <div class="left">
   <a href="karaf/index.html">
-    <h2>Karaf<br/>Manual</h2>
+    <h2>Karaf Manual</h2>
   </a>
 </div>
 
 <div class="right">
-  Apache ServiceMix uses Apache Karaf as the underlying OSGi server runtime.  This manual will explain the features and functionality provided by Karaf.  
+  <p>Apache ServiceMix uses Apache Karaf as the underlying OSGi server runtime.  This manual will explain the features and functionality provided by Karaf.</p>
 </div>
 
 <div class="left">
@@ -60,8 +54,16 @@
 </div>
 
 <div class="right">
-  Help pages for all the available commands in the Apache ServiceMix console.
+  <p>Help pages for all the available commands in the Apache ServiceMix console.</p>
 </div>
 
+<div class="left">
+  <a href="commercial.html">
+    <h2>Commercial Guides</h2>
+  </a>
+</div>
 
+<div class="right">
+  <p>Documentation from commercial providers and books you can buy.</p>
+</div>
 </div>

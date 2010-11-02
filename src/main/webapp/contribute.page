@@ -1,0 +1,34 @@
+---
+<% attributes("title") = "Contributing" %>
+<% attributes("navigation") = false %>
+title: Contributing
+--- name:content pipeline:markdown
+
+# Contributing to the Documentation
+
+## Getting the Source
+
+## Editing the Source
+
+The documentation is written in a combination of mark-up languages. Most of the pages are written 
+using Comfluence mark-up or Markdown. The pages can be editied in any text editor.
+
+Pages are grouped into books using the `toc.ssp` file in the enclosing folder. This file contains 
+an HTML formated list defining the TOC for a book.
+
+## Building
+You can build the documentation as follows:
+
+    {pygmentize:: text}
+    mvn install
+    {pygmentize}
+
+If you want to edit the files in your text editor and be able to immediately see the site re-rendered in a browser then use
+
+    {pygmentize:: text}
+    mvn jetty:run
+    {pygmentize}
+
+You can now surf the site and see changes immediately.
+
+If you are on OS X then we highly recommend [TextMate](http://macromates.com/) as a great editor which supports Textile and Markdown
