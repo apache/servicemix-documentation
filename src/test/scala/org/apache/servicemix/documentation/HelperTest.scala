@@ -30,8 +30,10 @@ class HelperTest {
 
   @Test
   def testTocHelper = {
-    assertEquals("Should return valid TOC for /users-guide/index.conf",
-                 "/users-guide/toc.ssp", toc("/users-guide/index.conf"))
+    assertValidToc("/users-guide/toc.ssp", "/users-guide/index.conf")
+    assertValidToc("/users-guide/camel/toc.ssp", "/users-guide/camel/index.conf")
+    assertValidToc("/jbi/toc.ssp", "/jbi/components/index.html")
+
   }
 
   @Test
@@ -41,6 +43,11 @@ class HelperTest {
     assertFalse("Any other template engine means we're not in scalate:sitegen",
                 sitegen(new TemplateEngine()))
 
+  }
+
+  def assertValidToc(expected: String, location: String): Unit = {
+    assertEquals("Should return valid TOC for " + location,
+                 expected, toc(location))
   }
 
 }

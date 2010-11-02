@@ -44,11 +44,25 @@
     <prince document="jbi/jbi-guide"/>
   </target>
 
-  <target name="guide" description="Generate the User Guide PDF">
-    <prince document="users-guide/manual"/>
+  <target name="camel" description="Generate the Camel Guide PDF">
+    <prince document="users-guide/camel/manual"/>
   </target>
 
-  <target name="all" depends="jbi,guide" description="Generate all the PDF documents">
+  <target name="getting-started" description="Generate the Getting Started Guide PDF">
+    <prince document="users-guide/getting-started/manual"/>
+  </target>
+
+
+  <target name="migration" description="Generate the Migration Guide PDF">
+    <prince document="users-guide/migration/manual"/>
+  </target>
+
+  <target name="nmr" description="Generate the NMR Guide PDF">
+    <prince document="users-guide/nmr/manual"/>
+  </target>
+
+
+  <target name="all" depends="jbi,camel,getting-started,migration,nmr" description="Generate all the PDF documents">
     <!-- convenience target to generate all the PDFs -->
   </target>
 

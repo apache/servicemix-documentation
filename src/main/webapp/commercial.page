@@ -1,0 +1,30 @@
+---
+<% attributes("title") = "Commercial Guides" %>
+<% attributes("navigation") = false %>
+title: Commercial Documentation
+--- name:content pipeline:markdown
+
+# Commercial Guides
+
+## Books
+
+### Books by ServiceMix Commiters
+
+### Other Books
+
+* [Enterprise Integration Patterns : Designing, Building, and Deploying Messaging Solutions](http://www.amazon.com/exec/obidos/tg/detail/-/0321200683/ref%3Dpd_sim_b_4/002-7139888-4078404?_encoding=UTF8&v=glance) ([EAI Patterns Site](http://www.eaipatterns.com/))
+* [Service Oriented Java Business Integration - Enterprise Service Bus Integration Solutions for Java Developers](http://www.amazon.com/Service-Oriented-Business-Integration-Binildas-Christudas/dp/1847194400) Published by [PACKT](http://www.packtpub.com/service-oriented-java-business-integration/book) Authored by Binildas A. Christudas. ISBN-1847194400
+* Excellent [SOA Books](http://www.soabooks.com/) by Thomas Erl
+* [SOA Design Patterns](http://www.soadesignpatterns.com/) by Thomas Erl
+* [Understanding Enterprise SOA](http://www.amazon.com/exec/obidos/tg/detail/-/1932394591/qid%3D1132084529/sr%3D1-3/ref%3Dsr_1_3/002-7139888-4078404?v=glance&s=books) ([Manning](http://www.manning.com/books/pulier))
+* [Service-Oriented Architecture : A Field Guide to Integrating XML and Web Services](http://www.amazon.com/o/ASIN/0131428985/002-7139888-4078404?SubscriptionId=16H682Z2XJ5FHSFZ3VR2)
+* [Service-Oriented Architecture : Concepts, Technology, and Design](http://www.amazon.com/o/ASIN/0131858580/002-7139888-4078404?SubscriptionId=16H682Z2XJ5FHSFZ3VR2)
+* [Enterprise SOA : Service-Oriented Architecture Best Practices](http://www.amazon.com/o/ASIN/0131465759/002-7139888-4078404?SubscriptionId=16H682Z2XJ5FHSFZ3VR2)
+* [Understanding SOA with Web Services](http://www.amazon.com/exec/obidos/tg/detail/-/0321180860/ref%3Dpd_sim_b_3/002-7139888-4078404?_encoding=UTF8&v=glance)
+* [Web Services Platform Architecture : SOAP, WSDL, WS-Policy, WS-Addressing, WS-BPEL, WS-Reliable Messaging, and More](http://www.amazon.com/exec/obidos/tg/detail/-/0131488740/ref%3Dpd_sim_b_3/002-7139888-4078404?_encoding=UTF8&v=glance)
+* [Web Services and Service-Oriented Architectures: The Savvy Manager's Guide](http://www.amazon.com/exec/obidos/tg/detail/-/1558609067/ref%3Dpd_sim_b_6/002-7139888-4078404?_encoding=UTF8&v=glance)
+* [Loosely Coupled: The Missing Pieces of Web Services](http://www.amazon.com/exec/obidos/tg/detail/-/1881378241/ref%3Dpd_sim_b_4/002-7139888-4078404?_encoding=UTF8&v=glance)
+
+## Enterprise Documentation
+
+* [Fuse ESB Documentation](http://fusesource.com/documentation/fuse_esb_documentation) - Documentation for the FUSE ESB distribution of ServiceMix 4.x.

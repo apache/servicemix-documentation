@@ -1,0 +1,11 @@
+<ul>
+    <li id="migration">
+        <a href="${uri("/users-guide/migration/index.html")}">Migration Guide</a>
+        <ul>
+            <li id="what-is-smx4"><a href="${uri("/users-guide/getting-started/what-is-smx4.html")}">What is ServiceMix 4?</a></li>
+            <li id="installation"><a href="${uri("/users-guide/getting-started/installation.html")}">Installing ServiceMix</a></li>
+            <li id="discover"><a href="${uri("/users-guide/getting-started/discover")}">Discover ServiceMix</a></li>
+            <li id="technology-selection"><a href="${uri("/users-guide/getting-started/technology-selection.html")}">Technology selection guidelines</a></li>
+        </ul>
+    </li>
+</ul>
