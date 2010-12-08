@@ -18,9 +18,13 @@
 package scalate
 
 import org.fusesource.scalate.util.Logging
+import org.fusesource.scalate.wikitext.Snippets
 
 class Boot extends Logging {
 
-  def run = debug("Boot class started")
+  def run = {
+    debug("Boot class started")
+    Snippets.addPrefix("servicemix", "http://svn.apache.org/repos/asf/servicemix")
+  }
 
 }
