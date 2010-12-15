@@ -390,7 +390,7 @@
           <webAppConfig>
             <contextPath>/</contextPath>
             <baseResource implementation="org.eclipse.jetty.util.resource.ResourceCollection">
-              <resources>${webapp.srcdir},${webapp.dir}</resources>
+              <resourcesAsCSV>${webapp.srcdir},${webapp.dir}</resourcesAsCSV>
             </baseResource>
           </webAppConfig>
           <systemProperties>
