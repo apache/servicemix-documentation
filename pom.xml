@@ -50,7 +50,7 @@
     <scalate.mode>production</scalate.mode>
     <scalate.workdir>${basedir}/target/scalateWorkDir</scalate.workdir>
 
-    <components.version>2010.02-SNAPSHOT</components.version>
+    <components.version>2011.01-SNAPSHOT</components.version>
     <karaf.version>2.1.99-SNAPSHOT</karaf.version>
     <servicemix.version>4.3.0-SNAPSHOT</servicemix.version>
   </properties>
