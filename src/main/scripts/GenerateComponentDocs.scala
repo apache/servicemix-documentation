@@ -71,14 +71,11 @@ def writeElementDocs(component: String, name: String, lines: Seq[String]) {
 
   try {
     for (line <- lines.map(_.trim).dropWhile(!_.startsWith("|"))) {
-      // dirty hack to make sure that the {html} macro is processed correctly
-      val result = if (line.endsWith("{html} |")) {
-        val tuple = line.splitAt(line.length - 8)
-        Array(tuple._1, tuple._2)
-      } else {
-        Array(line)
-      }
-      result.foreach(writer.println)
+      writer.printf(if (line.endsWith("|")) {
+                        "%s%n"
+                    } else {
+                        "%s "
+                    }, line)
     }
     writer.flush
   } finally {
