@@ -2,7 +2,13 @@
     <li id="camel">
         <a href="${uri("/users-guide/camel/index.html")}">Using Camel</a>
         <ul>
-            <li id="camel-deploy"><a href="${uri("/users-guide/camel/camel-deployment.html")}">Deployment options</a></li>
+            <li id="camel-deploy"><a href="${uri("/users-guide/camel/deployment/index.html")}">Deployment options</a>
+            <ul>
+                <li id="plain-blueprint"><a href="${uri("/users-guide/camel/deployment/plain-blueprint.html")}">Plain Blueprint XML</a></li>
+                <li id="plain-spring"><a href="${uri("/users-guide/camel/deployment/plain-spring.html")}">Plain Spring XML</a></li>
+                <li id="osgi-bundle"><a href="${uri("/users-guide/camel/deployment/osgi-bundle.html")}">OSGi Bundle</a></li>
+            </ul>
+            </li>
         </ul>
     </li>
 </ul>
