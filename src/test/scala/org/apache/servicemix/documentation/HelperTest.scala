@@ -33,7 +33,7 @@ class HelperTest {
     assertValidToc("/users-guide/toc.ssp", "/users-guide/index.conf")
     assertValidToc("/users-guide/camel/toc.ssp", "/users-guide/camel/index.conf")
     assertValidToc("/jbi/toc.ssp", "/jbi/components/index.html")
-
+    assertValidToc("/users-guide/camel/toc.ssp", "/users-guide/camel/deployment/osgi-bundle.conf")
   }
 
   @Test

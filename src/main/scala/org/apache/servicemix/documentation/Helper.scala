@@ -29,17 +29,21 @@ object Helper {
   val SEPARATOR = "/"
 
   /**
+   * No TOCs can be found in subfolders of the folders listed here
+   */
+  val PATH_LIMITS = Array("/jbi", "/users-guide/camel")
+
+  /**
    * Determine the right toc file to include for a given uri
    */
-  def toc(uri: String): String = toc(uri, !uri.startsWith("/jbi"))
-
-  def toc(uri: String, recursive: Boolean) = {
-    val elements = uri.substring(1).split(SEPARATOR).toSeq
-    val include = recursive match {
-      case true => elements.take(elements.size - 1)
-      case false => elements.take(1)
+  def toc(uri: String): String = {
+    PATH_LIMITS.find(limit => uri.startsWith(limit)) match {
+      case Some(limit) => limit + TOC
+      case None => {
+        val elements = uri.substring(1).split(SEPARATOR).toSeq
+        elements.take(elements.size - 1).mkString(SEPARATOR, SEPARATOR, TOC)
+      }
     }
-    include.mkString(SEPARATOR, SEPARATOR, TOC)
   }
 
   /**
