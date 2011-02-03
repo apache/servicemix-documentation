@@ -1,0 +1,17 @@
+<ul>
+    <li id="introduction">
+        <a href="${uri("/quickstart/index.html")}">Install and start servicemix</a>
+    </li>
+    <li id="basic-commands">
+        <a href="${uri("/quickstart/console-guide/index.html")}">Basic console commands</a>
+    </li>
+    <li id="features">
+        <a href="${uri("/quickstart/features/index.html")}">Installing additional features</a>
+    </li>
+    <li id="sample">
+        <a href="${uri("/quickstart/sample/index.html")}">Deploying a camel route </a>
+    </li>
+    <li id="sample-activemq">
+        <a href="${uri("/quickstart/sample-activemq/index.html")}">Example Camel + ActiveMQ</a>
+    </li>
+</ul>

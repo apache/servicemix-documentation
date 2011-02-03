@@ -20,8 +20,8 @@ package org.apache.servicemix.documentation
 import org.apache.servicemix.documentation.Helper._
 import org.junit.Test
 import org.junit.Assert.{assertEquals,assertFalse,assertTrue}
-import org.fusesource.scalate.maven.DummyTemplateEngine
 import org.fusesource.scalate.TemplateEngine
+import org.fusesource.scalate.support.DummyTemplateEngine
 
 /**
  * Test case for org.apache.servicemix.documentation.Helper

@@ -5,7 +5,9 @@
 <div id="bookpicker">
 
 <div class="left">
-  <h2>Quickstart Guide</h2>
+  <a href="quickstart/index.html">
+    <h2>Quickstart Guide</h2>
+  </a>
 </div>
 
 <div class="right">
