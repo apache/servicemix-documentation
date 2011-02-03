@@ -1,0 +1,20 @@
+<ul>
+    <li id="introduction">
+        <a href="${uri("/quickstart/index.html")}">Introduction</a>
+    </li>
+    <li id="basic-commands">
+        <a href="${uri("/quickstart/installation.html")}">Installing Apache ServiceMix</a>
+    </li>
+    <li id="features">
+        <a href="${uri("/quickstart/console.html")}">Console shell</a>
+    </li>
+    <li id="camel">
+        <a href="${uri("/quickstart/camel.html")}">Routing with Camel</a>
+    </li>
+    <li id="activemq">
+        <a href="${uri("/quickstart/activemq.html")}">Adding ActiveMQ to the 'Mix</a>
+    </li>
+    <li id="features">
+        <a href="${uri("/quickstart/features.html")}">Optional features</a>
+    </li>
+</ul>

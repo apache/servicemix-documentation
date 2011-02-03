@@ -204,6 +204,11 @@ div.note {
   border-color: #F7DF92;
 }
 
+div.code {
+  background-color: #FFFFDD;
+  border-color: #F7DF92;
+}
+
 h1, h2, h3, h4, h5, h6 {
     line-height: normal;
     font-weight: bold;

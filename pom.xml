@@ -84,6 +84,16 @@
             <version>1.6.0</version>
         </dependency>
 
+        <!-- Scala -->
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-compiler</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+        </dependency>
+
         <!-- ensure that the components are available in the local repo -->
         <dependency>
             <groupId>org.apache.servicemix</groupId>

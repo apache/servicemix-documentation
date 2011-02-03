@@ -24,7 +24,7 @@ import org.fusesource.scalate.TemplateEngine
  */
 object Helper {
 
-  val SITEGEN_ENGINE = "org.fusesource.scalate.maven.DummyTemplateEngine"
+  val SITEGEN_ENGINE = "org.fusesource.scalate.support.DummyTemplateEngine"
   val TOC = "/toc.ssp"
   val SEPARATOR = "/"
 
