@@ -4,3 +4,6 @@ target
 .project
 *.i??
 .idea
+
+# Mac OSX
+.DS_Store
