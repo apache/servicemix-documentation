@@ -68,7 +68,7 @@ limitations under the License.
             <ul class="siteNav">
               <li ><a href="http://servicemix.apache.org/" title="Overview">Overview</a></li>
               <li><a href="http://servicemix.apache.org/download.html" title="Download">Download</a></li>
-              <li><a href="/index.html" title="Documentation">Documentation</a></li>
+              <li><a href="${uri("/index.html")}" title="Documentation">Documentation</a></li>
               <li>
                 <a href="http://servicemix.apache.org/support/index.html" title="Support">Support</a>
                 <ul>
