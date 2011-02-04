@@ -10,11 +10,6 @@
 
 <div class="right">
   <p>This guide will get you familiar with Apache ServiceMix.</p>
-  <% if (sitegen(engine)) { %>
-    <div class="pdf">
-      <a href="getting-started/manual.pdf" class="pdf">PDF document</a>
-    </div>
-  <% } %>
 </div>
 
 <div class="left">
@@ -27,7 +22,7 @@
   <p>Guide to using Apache Camel for data mediation in Apache ServiceMix.</p>
   <% if (sitegen(engine)) { %>
     <div class="pdf">
-      <a href="camel/manual.pdf" class="pdf">PDF document</a>
+      <a href="camel/camel-guide.pdf" class="pdf">PDF document</a>
     </div>
   <% } %>
 </div>
@@ -42,7 +37,7 @@
   <p>Guide to using the Apache ServiceMix NMR to move messages between endpoints inside the ESB.</p>
   <% if (sitegen(engine)) { %>
     <div class="pdf">
-      <a href="nmr/manual.pdf" class="pdf">PDF document</a>
+      <a href="nmr/nmr-guide.pdf" class="pdf">PDF document</a>
     </div>
   <% } %>
 </div>
@@ -55,10 +50,5 @@
 
 <div class="right">
   <p>Information in migrating to the latest version of Apache ServiceMix.</p>
-  <% if (sitegen(engine)) { %>
-    <div class="pdf">
-      <a href="migration/manual.pdf" class="pdf">PDF document</a>
-    </div>
-  <% } %>
 </div>
 </div>
