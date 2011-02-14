@@ -51,7 +51,7 @@
         <scalate.workdir>${basedir}/target/scalateWorkDir</scalate.workdir>
 
         <camel.version>2.6.0</camel.version>
-        <components.version>2011.01-SNAPSHOT</components.version>
+        <components.version>2011.01</components.version>
         <karaf.version>2.1.99-SNAPSHOT</karaf.version>
         <servicemix.version>4.3.0-SNAPSHOT</servicemix.version>
     </properties>
