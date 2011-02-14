@@ -17,6 +17,7 @@
  */
 package org.apache.servicemix.documentation
 
+import java.io.File
 import org.apache.servicemix.documentation.Helper._
 import org.junit.Test
 import org.junit.Assert.{assertEquals,assertFalse,assertTrue}
@@ -39,7 +40,7 @@ class HelperTest {
   @Test
   def testSitegen = {
     assertTrue("DummyTemplateEngine is used in scalate:sitegen",
-               sitegen(new DummyTemplateEngine(List())))
+               sitegen(new DummyTemplateEngine(Array[File]())))
     assertFalse("Any other template engine means we're not in scalate:sitegen",
                 sitegen(new TemplateEngine()))
 

@@ -46,7 +46,7 @@
 
         <scala.version>2.8.1</scala.version>
 
-        <scalate.version>1.4.0-SNAPSHOT</scalate.version>
+        <scalate.version>1.4.0</scalate.version>
         <scalate.mode>production</scalate.mode>
         <scalate.workdir>${basedir}/target/scalateWorkDir</scalate.workdir>
 
