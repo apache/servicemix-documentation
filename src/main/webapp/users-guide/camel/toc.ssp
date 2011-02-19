@@ -6,8 +6,15 @@
             <ul>
                 <li id="plain-blueprint"><a href="${uri("/users-guide/camel/deployment/plain-blueprint.html")}">Plain Blueprint XML</a></li>
                 <li id="plain-spring"><a href="${uri("/users-guide/camel/deployment/plain-spring.html")}">Plain Spring XML</a></li>
-                <li id="osgi-bundle"><a href="${uri("/users-guide/camel/deployment/osgi-bundle.html")}">OSGi Bundle</a></li>
+                <li id="osgi-bundle-spring"><a href="${uri("/users-guide/camel/deployment/osgi-bundle-spring.html")}">OSGi Bundle using Spring</a></li>
+                <li id="osgi-bundle-blueprint"><a href="${uri("/users-guide/camel/deployment/osgi-bundle-blueprint.html")}">OSGi Bundle using Blueprint</a></li>
             </ul>
+            </li>
+            <li id="installing-components">
+                <a href="${uri("/users-guide/camel/installing-components.html")}">Installing components</a>
+            </li>
+            <li id="troubleshooting">
+                <a href="${uri("/users-guide/camel/troubleshooting.html")}">Troubleshooting</a>
             </li>
         </ul>
     </li>
