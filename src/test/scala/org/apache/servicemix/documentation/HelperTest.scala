@@ -40,7 +40,7 @@ class HelperTest {
   @Test
   def testSitegen = {
     assertTrue("DummyTemplateEngine is used in scalate:sitegen",
-               sitegen(new DummyTemplateEngine(Array[File]())))
+               sitegen(new DummyTemplateEngine(null)))
     assertFalse("Any other template engine means we're not in scalate:sitegen",
                 sitegen(new TemplateEngine()))
 

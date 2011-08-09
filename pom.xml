@@ -44,9 +44,9 @@
 
         <pdf.required>false</pdf.required>
 
-        <scala.version>2.8.1</scala.version>
+        <scala.version>2.9.0</scala.version>
 
-        <scalate.version>1.4.0</scalate.version>
+        <scalate.version>1.5.0</scalate.version>
         <scalate.mode>production</scalate.mode>
         <scalate.workdir>${basedir}/target/scalateWorkDir</scalate.workdir>
 
@@ -377,7 +377,7 @@
                         </goals>
                         <phase>prepare-package</phase>
                         <configuration>
-                            <warSourceDirectory>${webapp.dir}</warSourceDirectory>
+                            <webappDirectory>${webapp.dir}</webappDirectory>
                         </configuration>
                     </execution>
                 </executions>
