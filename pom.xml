@@ -44,9 +44,9 @@
 
         <pdf.required>false</pdf.required>
 
-        <scala.version>2.9.0</scala.version>
+        <scala.version>2.9.1</scala.version>
 
-        <scalate.version>1.6.0-SNAPSHOT</scalate.version>
+        <scalate.version>1.5.3</scalate.version>
         <scalate.mode>production</scalate.mode>
         <scalate.workdir>${basedir}/target/scalateWorkDir</scalate.workdir>
 
