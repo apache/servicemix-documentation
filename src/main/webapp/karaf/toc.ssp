@@ -52,9 +52,6 @@
       <li id="extending-console">
         <a href="${uri("/karaf/developers-guide/extending-console.html")}">Extending Console</a>
       </li>
-      <li id="security-framework">
-        <a href="${uri("/karaf/developers-guide/security-framework.html")}">Security Framework</a>
-      </li>
       <li id="writing-tests">
         <a href="${uri("/karaf/developers-guide/writing-tests.html")}">Tests with Pax Exam</a>
       </li>

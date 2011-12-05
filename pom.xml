@@ -32,7 +32,7 @@
     <groupId>org.apache.servicemix</groupId>
     <artifactId>documentation</artifactId>
     <name>Apache ServiceMix Documentation</name>
-    <version>4.3.0-SNAPSHOT</version>
+    <version>4.4.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <properties>
@@ -50,10 +50,10 @@
         <scalate.mode>production</scalate.mode>
         <scalate.workdir>${basedir}/target/scalateWorkDir</scalate.workdir>
 
-        <camel.version>2.6.0</camel.version>
+        <camel.version>2.8.3</camel.version>
         <components.version>2011.01</components.version>
-        <karaf.version>2.1.99-SNAPSHOT</karaf.version>
-        <servicemix.version>4.3.0-SNAPSHOT</servicemix.version>
+        <karaf.version>2.2.3</karaf.version>
+        <servicemix.version>4.4.0</servicemix.version>
     </properties>
 
     <dependencies>
@@ -312,11 +312,16 @@
                             <artifactItems>
                                 <artifactItem>
                                     <groupId>org.apache.karaf</groupId>
-                                    <artifactId>org.apache.karaf.doc</artifactId>
+                                    <artifactId>manual</artifactId>
                                     <version>${karaf.version}</version>
                                     <type>war</type>
                                     <outputDirectory>${project.build.directory}/webapp/karaf</outputDirectory>
                                     <includes>developers-guide/*.conf,users-guide/*.conf</includes>
+                                    <!-- TODO: figure out how to handle these files that refer to the karaf codebase -->
+                                    <excludes>
+                                        developers-guide/security-framework.conf,
+                                        users-guide/provisioning-schema.conf
+                                    </excludes>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>
@@ -332,7 +337,7 @@
                             <artifactItems>
                                 <artifactItem>
                                     <groupId>org.apache.karaf</groupId>
-                                    <artifactId>org.apache.karaf.doc</artifactId>
+                                    <artifactId>manual</artifactId>
                                     <version>${karaf.version}</version>
                                     <type>war</type>
                                     <outputDirectory>${project.build.directory}/webapp</outputDirectory>
