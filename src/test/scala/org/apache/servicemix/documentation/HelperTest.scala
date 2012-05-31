@@ -46,6 +46,13 @@ class HelperTest {
 
   }
 
+  @Test
+  def testJbi = {
+    assertTrue(jbi("/jbi/index.html"))
+    assertTrue(jbi("/jbi/components/servicemix-http.html"))
+    assertFalse(jbi("/nmr/index.html"))
+  }
+
   def assertValidToc(expected: String, location: String): Unit = {
     assertEquals("Should return valid TOC for " + location,
                  expected, toc(location))

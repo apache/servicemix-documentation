@@ -139,9 +139,17 @@ limitations under the License.
             ${include(toc(requestUri))}
         </div>
         <div id="body">
+          <% if (jbi(requestUri)) { %>
+          <div class="note">
+            <h1>JBI Support deprecated in Apache ServiceMix 4</h1>
+            <p>JBI 1.0 support is available in Apache ServiceMix 4 to allow existing users to migrate more easily to this latest version - if you're a new user, you should consider JBI deprecated and not use it for your project.
+            Take a look at our <a href="${uri("/users-guide/getting-started/technology-selection.html")}"</a>technology selection guidelines</a> for more information.</p>
+          </div>
+          <% } %>
           <%= body %>
         </div>
       <% } %>
+
       <% if (!navigation) { %>
         <%= body %>
       <% } %>
