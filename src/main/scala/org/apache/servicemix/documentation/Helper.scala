@@ -51,4 +51,9 @@ object Helper {
    */
   def sitegen(engine: TemplateEngine) = (engine.getClass.getName == SITEGEN_ENGINE)
 
+  /**
+   * Determine if this is a page from the JBI guide
+   */
+  def jbi(uri: String) = uri.startsWith("/jbi")
+
 }
