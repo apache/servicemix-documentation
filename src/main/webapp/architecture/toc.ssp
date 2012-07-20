@@ -1,0 +1,11 @@
+<ul>
+    <li id="introduction">
+        <a href="${uri("/architecture/index.html")}">Introduction</a>
+    </li>
+    <li id="what-is-smx4">
+        <a href="${uri("/architecture/what-is-smx4.html")}">What is (in) Apache ServiceMix?</a>
+    </li>
+    <li id="basic-commands">
+        <a href="${uri("/architecture/technology-selection.html")}">Technology selection guidelines</a>
+    </li>
+</ul>

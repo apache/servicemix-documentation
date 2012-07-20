@@ -20,18 +20,58 @@
 </div>
 
 <div class="left">
-  <a href="users-guide/index.html">
-    <h2>User Guides</h2>
+  <a href="architecture/index.html">
+    <h2>Architecture Guide</h2>
   </a>
 </div>
 
 <div class="right">
-  <p>Guides explaining all of the features and components in Apache ServiceMix.</p>
+  <p>Apache ServiceMix contains a lot of different components and it embeds a lot of other Apache projects.  This architecture guide will help you select and configure the right components when building your own solution.</p>
+</div>
+
+<div class="left">
+  <a href="activemq/index.html">
+    <h2>ActiveMQ Guide</h2>
+  </a>
+</div>
+
+<div class="right">
+  <p>Apache ServiceMix embeds Apache ActiveMQ to provide a JMS message broker that you can interact with from your Camel routes, providing support for message persistence, clustering, failover, ...</p>
+</div>
+
+<div class="left">
+  <a href="camel/index.html">
+    <h2>Camel Guide</h2>
+  </a>
+</div>
+
+<div class="right">
+  <p>Apache Camel is a core component of Apache ServiceMix.  This guide will show you how to build and deploy Camel routes for Apache ServiceMix.</p>
+  <% if (sitegen(engine)) { %>
+    <div class="pdf">
+      <a href="camel/camel-guide.pdf" class="pdf">PDF document</a>
+    </div>
+  <% } %>
+</div>
+
+<div class="left">
+  <a href="nmr/index.html">
+    <h2>NMR Guide</h2>
+  </a>
+</div>
+
+<div class="right">
+  <p>The NMR is a lightweight mechanism for communicating between Camel routes and CXF endpoints.  It also provides listener interfaces to learn about exchanges and endpoints at runtime.</p>
+  <% if (sitegen(engine)) { %>
+    <div class="pdf">
+      <a href="jbi/jbi-guide.pdf" class="pdf">PDF document</a>
+    </div>
+  <% } %>
 </div>
 
 <div class="left">
   <a href="jbi/index.html">
-    <h2>ServiceMix JBI Manual</h2>
+    <h2>JBI Guide</h2>
   </a>
 </div>
 
