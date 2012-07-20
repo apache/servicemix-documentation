@@ -137,11 +137,12 @@ div#siteFooter {
   background-color: #76a3cd;
   margin-top: 30px;
   color: #ffffff;
-  text-align: right;
+  text-align: center;
   vertical-align: bottom;
   clear: both;
   padding-left: 20px;
   padding-right: 20px;
+  font-size: 80%;
 }
 
 div#content {
