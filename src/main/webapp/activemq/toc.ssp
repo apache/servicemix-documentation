@@ -1,0 +1,8 @@
+<ul>
+    <li id="introduction">
+        <a href="${uri("/activemq/index.html")}">Introduction</a>
+    </li>
+    <li id="activemq-camel">
+        <a href="${uri("/activemq/activemq-camel-example.html")}">ActiveMQ and Camel example</a>
+    </li>
+</ul>

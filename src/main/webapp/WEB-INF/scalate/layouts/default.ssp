@@ -154,8 +154,10 @@ limitations under the License.
         <%= body %>
       <% } %>
     </div>
-      <div id="siteFooter">
-        <p>Thanks for using Apache ServiceMix!</p>
-  </div>
+    <div id="siteFooter">
+      &copy; 2008-2011 The Apache Software Foundation - <a href="http://servicemix.apache.org/site/privacy-policy.html">Privacy Policy</a>
+      <br/>
+      Apache ServiceMix, ServiceMix, Apache, the Apache feather logo, and the Apache ServiceMix project logo are trademarks of The Apache Software Foundation.
+    </div>
 </body>
 </html>
