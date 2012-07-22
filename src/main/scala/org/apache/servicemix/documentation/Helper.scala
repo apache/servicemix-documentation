@@ -31,7 +31,7 @@ object Helper {
   /**
    * No TOCs can be found in subfolders of the folders listed here
    */
-  val PATH_LIMITS = Array("/jbi", "/users-guide/camel")
+  val PATH_LIMITS = Array("/jbi", "/camel")
 
   /**
    * Determine the right toc file to include for a given uri

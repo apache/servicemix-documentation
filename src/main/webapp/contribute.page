@@ -6,29 +6,20 @@ title: Contributing
 
 # Contributing to the Documentation
 
-## Getting the Source
+## Found an mistake or have a suggestion for improvement?
 
-## Editing the Source
+We welcome any feedback or contribution to the documentation.
 
-The documentation is written in a combination of mark-up languages. Most of the pages are written 
-using Comfluence mark-up or Markdown. The pages can be editied in any text editor.
+Whether you spotted a mistake, have suggestions for new content or just want to say hi, feel to get in touch using the [mailing lists](http://servicemix.apache.org/community/mailing-lists.html), [IRC channel](http://servicemix.apache.org/community/irc.html) or on Twitter using the `#servicemix` hash tag.
 
-Pages are grouped into books using the `toc.ssp` file in the enclosing folder. This file contains 
-an HTML formated list defining the TOC for a book.
+## Contributing to the documentation code
 
-## Building
-You can build the documentation as follows:
+The documentation is written in a combination of mark-up languages. Most of the pages are written
+using Confluence mark-up or Markdown. The pages can be edited in any text editor.
 
-    {pygmentize:: text}
-    mvn install
-    {pygmentize}
+Pages are grouped into books using the `toc.ssp` file in the enclosing folder. This file contains
+an HTML formatted list defining the TOC for a book.
 
-If you want to edit the files in your text editor and be able to immediately see the site re-rendered in a browser then use
+You can find more information about how to get and build the documentation codebase [here](http://servicemix.apache.org/developers/source/documentation-source.html) and one more thing...
 
-    {pygmentize:: text}
-    mvn jetty:run
-    {pygmentize}
-
-You can now surf the site and see changes immediately.
-
-If you are on OS X then we highly recommend [TextMate](http://macromates.com/) as a great editor which supports Textile and Markdown
+... we really love documentation patches ;)

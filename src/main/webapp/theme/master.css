@@ -5,7 +5,6 @@
 body {
   font-family: Verdana, Arial, sans-serif;  
   margin: 0px auto;
-  width: 95%;
   font-size: .8em;
 }
 
@@ -17,11 +16,22 @@ img {
   margin: 1em;
 }
 
+div#page {
+  padding-top: 12px;
+}
+
 div#siteHeader {
-  background-color: #76a3cd;
-  padding-left: 20px;
-  padding-right: 20px;
+  background-image: url("images/bg.png");
   clear: both;
+}
+
+img {
+    margin: 2px;
+}
+
+div#siteHeader table {
+  margin: 2px auto;
+  width: 85%;
 }
 
 div#siteHeader a:link {
@@ -43,49 +53,21 @@ div#siteHeader table, div#siteHeader td {
   vertical-align: middle;
 }
 
-ul.siteNav {
+div#siteHeader ul.siteNav {
   list-style-type: none;
   padding:0;
-  margin:0;
-  position: relative;
-  left:40%;
-  }
+  margin-top: 15px;
+  text-align: right;
+}
   
 ul.siteNav li {
-	display: inline;
-	float: left;
-	padding: 0 20px;
-	}
-
-ul.siteNav li ul {
-  position:absolute;
-  margin-top:-1em;
-	margin-left:.5em;
-	display: none;
-  }
-
-ul.siteNav li a {
-	text-decoration: none;
-	padding: 5px;
-	}
-
-ul.siteNav li:hover ul { 
-display: block; 
+  display: inline;
+  padding-left: 40px;
+  font-weight: 300;
 }
 
-ul.siteNav li ul {
-  list-style-type: none;
-  padding:0;
-  margin:0;
-  margin-top:5px;
-  margin-bottom:5px;
-  background-color: #76a3cd;
-}
-
-ul.siteNav li ul li { 
-  clear: both;
-  margin:3px;
-  padding:3px;
+ul.siteNav li form {
+  display: inline-block;
 }
 
 div#sectHeader {
@@ -133,21 +115,20 @@ ul.sectNav li {
   }
 
 div#siteFooter {
-  height: 25px;
-  background-color: #76a3cd;
+  background: url("images/bg.png") center;
   margin-top: 30px;
   color: #ffffff;
   text-align: center;
   vertical-align: bottom;
   clear: both;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 2px 20px;
   font-size: 80%;
 }
 
 div#content {
-   clear: both;
-  margin: 30px;
+  clear: both;
+  margin: 50px auto;
+  width: 85%;
 }
 
 div#body {
@@ -161,6 +142,10 @@ div#nav {
   float: left;
   margin: 0px;
   margin-bottom: 30px;
+}
+
+div.clearing {
+  clear: both;
 }
 
 div.highlight pre {

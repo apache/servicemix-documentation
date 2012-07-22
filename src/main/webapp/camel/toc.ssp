@@ -1,20 +1,20 @@
 <ul>
     <li id="camel">
-        <a href="${uri("/users-guide/camel/index.html")}">Using Camel</a>
+        <a href="${uri("/camel/index.html")}">Using Camel</a>
         <ul>
-            <li id="camel-deploy"><a href="${uri("/users-guide/camel/deployment/index.html")}">Deployment options</a>
+            <li id="camel-deploy"><a href="${uri("/camel/deployment/index.html")}">Deployment options</a>
             <ul>
-                <li id="plain-blueprint"><a href="${uri("/users-guide/camel/deployment/plain-blueprint.html")}">Plain Blueprint XML</a></li>
-                <li id="plain-spring"><a href="${uri("/users-guide/camel/deployment/plain-spring.html")}">Plain Spring XML</a></li>
-                <li id="osgi-bundle-spring"><a href="${uri("/users-guide/camel/deployment/osgi-bundle-spring.html")}">OSGi Bundle using Spring</a></li>
-                <li id="osgi-bundle-blueprint"><a href="${uri("/users-guide/camel/deployment/osgi-bundle-blueprint.html")}">OSGi Bundle using Blueprint</a></li>
+                <li id="plain-blueprint"><a href="${uri("/camel/deployment/plain-blueprint.html")}">Plain Blueprint XML</a></li>
+                <li id="plain-spring"><a href="${uri("/camel/deployment/plain-spring.html")}">Plain Spring XML</a></li>
+                <li id="osgi-bundle-spring"><a href="${uri("/camel/deployment/osgi-bundle-spring.html")}">OSGi Bundle using Spring</a></li>
+                <li id="osgi-bundle-blueprint"><a href="${uri("/camel/deployment/osgi-bundle-blueprint.html")}">OSGi Bundle using Blueprint</a></li>
             </ul>
             </li>
             <li id="installing-components">
-                <a href="${uri("/users-guide/camel/installing-components.html")}">Installing components</a>
+                <a href="${uri("/camel/installing-components.html")}">Installing components</a>
             </li>
             <li id="troubleshooting">
-                <a href="${uri("/users-guide/camel/troubleshooting.html")}">Troubleshooting</a>
+                <a href="${uri("/camel/troubleshooting.html")}">Troubleshooting</a>
             </li>
         </ul>
     </li>
