@@ -82,8 +82,8 @@ limitations under the License.
                   <input name="oe" type="hidden" value="UTF-8"></input>
                   <input maxlength="255" name="q" size="15" type="text" value=""></input>
                   <input name="btnG" type="submit" value="Search"></input>
-                  <input name="domains" type="hidden" value="servicemix.apache.org/docs/4.4.0/"></input>
-                  <input name="sitesearch" type="hidden" value="servicemix.apache.org/docs/4.4.0/"></input>
+                  <input name="domains" type="hidden" value="servicemix.apache.org/docs/${servicemix.docs.location}"></input>
+                  <input name="sitesearch" type="hidden" value="servicemix.apache.org/docs/${servicemix.docs.location}"></input>
                 </form>
               </li>
             </ul>
