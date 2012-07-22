@@ -32,9 +32,9 @@ class HelperTest {
   @Test
   def testTocHelper = {
     assertValidToc("/users-guide/toc.ssp", "/users-guide/index.conf")
-    assertValidToc("/users-guide/camel/toc.ssp", "/users-guide/camel/index.conf")
+    assertValidToc("/camel/toc.ssp", "/camel/index.conf")
+    assertValidToc("/camel/toc.ssp", "/camel/deployment/index.conf")
     assertValidToc("/jbi/toc.ssp", "/jbi/components/index.html")
-    assertValidToc("/users-guide/camel/toc.ssp", "/users-guide/camel/deployment/osgi-bundle.conf")
   }
 
   @Test
@@ -43,7 +43,6 @@ class HelperTest {
                sitegen(new DummyTemplateEngine(null)))
     assertFalse("Any other template engine means we're not in scalate:sitegen",
                 sitegen(new TemplateEngine()))
-
   }
 
   @Test

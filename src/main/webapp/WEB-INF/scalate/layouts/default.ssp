@@ -60,74 +60,32 @@ limitations under the License.
   </script>
 </head>
 <body>
+  <div id="page">
     <div id="siteHeader">
       <table width="100%">
       <tr valign="middle">
         <td align="left">
             <a href="http://servicemix.apache.org/" title="An open source ESB">
-            <img border="0" src="${uri("/images/logodesign.png")}" height="100"/><img border="0" src="${uri("/images/new-logo.png")}" />
+            <img border="0" src="${uri("/images/logodesign.png")}" height="80"/><img border="0" height="80" src="${uri("/images/new-logo.png")}" />
             </a>
           </td>
           <td align="right">
             <a href="http://www.apache.org/" title="The Apache Sofware Foundation">
-              <img border="0" src="${uri("http://activemq.apache.org/images/asf-logo.png")}">
+              <img border="0" height="60" src="${uri("/images/ASF-logo.png")}">
             </a>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">
             <ul class="siteNav">
-              <li ><a href="http://servicemix.apache.org/" title="Overview">Overview</a></li>
-              <li><a href="http://servicemix.apache.org/download.html" title="Download">Download</a></li>
-              <li><a href="${uri("/index.html")}" title="Documentation">Documentation</a></li>
-              <li>
-                <a href="http://servicemix.apache.org/support/index.html" title="Support">Support</a>
-                <ul>
-                  <li><a href="http://servicemix.apache.org/support/mailing-lists.html" title="Mailing Lists">Mailing Lists</a></li>
-                  <li><a href="http://servicemix.apache.org/support/discussion-forums.html" title="Discussion Forums">Forums</a></li>
-                  <li><a href="http://servicemix.apache.org/irc.html" title="IRC">IRC</a></li>
-                <li><a href="http://servicemix.apache.org/support/faq.html" title="FAQ">FAQ</a></li>
-                  <li><a href="http://servicemix.apache.org/support/presentations.html" title="Presentations">Presentations</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="http://servicemix.apache.org/contrib/index.html" title="Contributing">Contributing</a>
-                <ul>
-                  <li><a href="http://servicemix.apache.org/contrib/becoming-a-committer.html" title="Committing">Become a committer</a></li>
-                  <li><a href="http://servicemix.apache.org/contrib/committers-guide.html" title="Committing Guide">Committer Guide</a></li>
-                  <li><a href="http://servicemix.apache.org/contrib/source.html" title="Source">Source</a></li>
-                  <li><a href="http://issues.apache.org/activemq/browse/SM" title="JIRA">JIRA</a></li>
-                  <li><a href="http://servicemix.apache.org/contrib/developers.html" title="Developers">Developer Resources</a></li>
-                </ul>
-              </li>
-              <% if (sitegen(engine)) { %>
+              <li><a href="${uri("/index.html")}" title="Overview">Guides Overview</a></li>
+              <li><a href="${uri("/contribute.html")}" title="Contributing?">Contributing?</a></li>
               <li>
                 <form action="http://www.google.com/search" method="get" style="font-size: 10px;">
-                <input name="ie" type="hidden" value="UTF-8"></input>
-                <input name="oe" type="hidden" value="UTF-8"></input>
+                  <input name="ie" type="hidden" value="UTF-8"></input>
+                  <input name="oe" type="hidden" value="UTF-8"></input>
                   <input maxlength="255" name="q" size="15" type="text" value=""></input>
                   <input name="btnG" type="submit" value="Search"></input>
-                  <input name="domains" type="hidden" value="servicemix.apache.org/docs/4.3.0-SNAPSHOT/"></input>
-                  <input name="sitesearch" type="hidden" value="servicemix.apache.org/docs/4.3.0-SNAPSHOT/"></input>
+                  <input name="domains" type="hidden" value="servicemix.apache.org/docs/4.4.0/"></input>
+                  <input name="sitesearch" type="hidden" value="servicemix.apache.org/docs/4.4.0/"></input>
                 </form>
               </li>
-              <% } %>
-            </ul>
-          </td>
-        </tr>
-      </table>
-    </div>
-    <div id="sectHeader">
-      <table width="100%">
-        <tr>
-          <td>
-            <a href="${uri("/index.html")}><h1>Apache ServiceMix Guides</h1></a>
-          </td>
-          <td align="right" valign="middle">
-            <ul class="sectNav">
-              <li><a href="${uri("/index.html")}" title="Home">Home</a></li>
-              <li>Guides</li>
-              <li><a href="${uri("/contribute.html")}">Contribute</a></li>
             </ul>
           </td>
         </tr>
@@ -155,9 +113,10 @@ limitations under the License.
       <% } %>
     </div>
     <div id="siteFooter">
-      &copy; 2008-2011 The Apache Software Foundation - <a href="http://servicemix.apache.org/site/privacy-policy.html">Privacy Policy</a>
+      &copy; 2008-2012 The Apache Software Foundation - <a href="http://servicemix.apache.org/site/privacy-policy.html">Privacy Policy</a>
       <br/>
       Apache ServiceMix, ServiceMix, Apache, the Apache feather logo, and the Apache ServiceMix project logo are trademarks of The Apache Software Foundation.
     </div>
+  </div>
 </body>
 </html>
