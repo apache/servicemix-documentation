@@ -64,7 +64,7 @@
   <p>The NMR is a lightweight mechanism for communicating between Camel routes and CXF endpoints.  It also provides listener interfaces to learn about exchanges and endpoints at runtime.</p>
   <% if (sitegen(engine)) { %>
     <div class="pdf">
-      <a href="jbi/jbi-guide.pdf" class="pdf">PDF document</a>
+      <a href="nmr/nmr-guide.pdf" class="pdf">PDF document</a>
     </div>
   <% } %>
 </div>
