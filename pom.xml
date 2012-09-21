@@ -40,7 +40,6 @@
         <jetty-port>8080</jetty-port>
         <webapp.srcdir>${project.basedir}/src/main/webapp</webapp.srcdir>
         <webapp.dir>${project.build.directory}/webapp</webapp.dir>
-        <maven.wagon.version>2.2</maven.wagon.version>
 
         <pdf.required>false</pdf.required>
 
@@ -56,6 +55,8 @@
 
         <servicemix.version>4.4.2</servicemix.version>
         <servicemix.docs.location>4.4.x</servicemix.docs.location>
+
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
     <dependencies>
@@ -384,16 +385,7 @@
                 </executions>
                 <configuration>
                     <warSourceDirectory>${webapp.dir}</warSourceDirectory>
-                    <remoteServerId>people.apache.org</remoteServerId>
-                    <remoteServerUrl>scp://people.apache.org/www/servicemix.apache.org/docs/${servicemix.docs.location}</remoteServerUrl>
                 </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.apache.maven.wagon</groupId>
-                        <artifactId>wagon-ssh</artifactId>
-                        <version>${maven.wagon.version}</version>
-                    </dependency>
-                </dependencies>
             </plugin>
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
@@ -459,6 +451,16 @@
                         <Embed-Transitive>true</Embed-Transitive>
                         <Webapp-Context>documentation</Webapp-Context>
                     </instructions>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-scm-publish-plugin</artifactId>
+                <version>1.0-beta-1</version>
+                <configuration>
+                    <checkinComment>Updating ServiceMix ${servicemix.docs.location} documentation contents</checkinComment>
+                    <pubScmUrl>scm:svn:https://svn.apache.org/repos/asf/servicemix/site/production/docs/${servicemix.docs.location}</pubScmUrl>
+                    <content>${project.build.directory}/sitegen</content>
                 </configuration>
             </plugin>
         </plugins>
