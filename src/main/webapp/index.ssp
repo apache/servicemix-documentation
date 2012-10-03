@@ -20,13 +20,13 @@
 </div>
 
 <div class="left">
-  <a href="architecture/index.html">
-    <h2>Architecture Guide</h2>
+  <a href="user/index.html">
+    <h2>User Guide</h2>
   </a>
 </div>
 
 <div class="right">
-  <p>Apache ServiceMix contains a lot of different components and it embeds a lot of other Apache projects.  This architecture guide will help you select and configure the right components when building your own solution.</p>
+  <p>Apache ServiceMix contains a lot of different components and it embeds a lot of other Apache projects.  This user guide will help you select and configure the right components when building your own solution.</p>
 </div>
 
 <div class="left">
