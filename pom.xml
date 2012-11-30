@@ -458,7 +458,7 @@
                 <artifactId>maven-scm-publish-plugin</artifactId>
                 <version>1.0-beta-1</version>
                 <configuration>
-                    <checkinComment>Updating ServiceMix ${servicemix.docs.location} documentation contents</checkinComment>
+                    <checkinComment>[scm-publish] Updating ServiceMix ${servicemix.docs.location} documentation contents</checkinComment>
                     <pubScmUrl>scm:svn:https://svn.apache.org/repos/asf/servicemix/site/production/docs/${servicemix.docs.location}</pubScmUrl>
                     <content>${project.build.directory}/sitegen</content>
                 </configuration>
