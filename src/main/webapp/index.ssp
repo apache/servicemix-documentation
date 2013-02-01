@@ -85,16 +85,6 @@
 </div>
 
 <div class="left">
-  <a href="karaf/index.html">
-    <h2>Karaf Manual</h2>
-  </a>
-</div>
-
-<div class="right">
-  <p>Apache ServiceMix uses Apache Karaf as the underlying OSGi server runtime.  This manual will explain the features and functionality provided by Karaf.</p>
-</div>
-
-<div class="left">
   <a href="commands/index.html">
     <h2>Command Reference</h2>
   </a>
@@ -103,6 +93,27 @@
 <div class="right">
   <p>Help pages for all the available commands in the Apache ServiceMix console.</p>
 </div>
+
+<div class="left">
+  <a href="users-guide/index.html">
+    <h2>Karaf User guide</h2>
+  </a>
+</div>
+
+<div class="right">
+  <p>Apache ServiceMix uses Apache Karaf as the underlying OSGi server runtime. This manual explains about the features and functionality provided by Karaf.</p>
+</div>
+
+<div class="left">
+  <a href="developers-guide/index.html">
+    <h2>Karaf Developer guide</h2>
+  </a>
+</div>
+
+<div class="right">
+  <p>The Apache Karaf Developer Guide gives you some information about developing with and for the OSGi server runtime.</p>
+</div>
+
 
 <div class="left">
   <a href="commercial.html">

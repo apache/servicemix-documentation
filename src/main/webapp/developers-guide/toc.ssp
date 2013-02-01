@@ -1,0 +1,25 @@
+<ul>
+  <li id="karaf-developers-guide">
+    <a href="#">Developer's Guide</a>
+    <ul>
+      <li id="extending-console">
+        <a href="${uri("/developers-guide/extending-console.html")}">Extending Console</a>
+      </li>
+      <li id="writing-tests">
+        <a href="${uri("/developers-guide/writing-tests.html")}">Tests with Pax Exam</a>
+      </li>
+      <li id="debugging">
+        <a href="${uri("/developers-guide/debugging.html")}">Debug Karaf</a>
+      </li>
+      <li id="creating-bundles">
+        <a href="${uri("/developers-guide/creating-bundles.html")}">Creating bundles</a>
+      </li>
+      <li id="connect-console">
+        <a href="${uri("/developers-guide/connect-console.html")}">Connect to the console</a>
+      </li>
+      <li id="shell-syntax">
+        <a href="${uri("/developers-guide/shell-syntax.html")}">Console shell syntax</a>
+      </li>
+    </ul>
+  </li>
+</ul>

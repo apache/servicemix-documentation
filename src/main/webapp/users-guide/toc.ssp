@@ -1,0 +1,43 @@
+<ul>
+  <li id="karaf-users-guide">
+    <a href="#">User's Guide</a>
+    <ul>
+      <li id="karaf-installation">
+        <a href="${uri("/users-guide/installation.html")}">Installation</a>
+      </li>
+      <li id="karaf-directory-structure">
+        <a href="${uri("/users-guide/directory-structure.html")}">Directory structure</a>
+      </li>
+      <li id="karaf-starting-and-stopping">
+        <a href="${uri("/users-guide/start-stop.html")}">Starting and stopping Karaf</a>
+      </li>
+      <li id="using-console">
+        <a href="${uri("/users-guide/using-console.html")}">Using the console</a>
+      </li>
+      <li id="web-console">
+        <a href="${uri("/users-guide/web-console.html")}">Web console</a>
+      </li>
+      <li id="remote-console">
+        <a href="${uri("/users-guide/remote-console.html")}">Remote console</a>
+      </li>
+      <li id="child-instances">
+        <a href="${uri("/users-guide/child-instances.html")}">Child instances</a>
+      </li>
+      <li id="security">
+        <a href="${uri("/users-guide/security.html")}">Security</a>
+      </li>
+      <li id="failover">
+        <a href="${uri("/users-guide/failover.html")}">Failover deployments</a>
+      </li>
+      <li id="logging-system">
+        <a href="${uri("/users-guide/logging-system.html")}">Logging system</a>
+      </li>
+      <li id="deployer">
+        <a href="${uri("/users-guide/deployer.html")}">Deployer</a>
+      </li>
+      <li id="configuration">
+        <a href="${uri("/users-guide/configuration.html")}">Configuration</a>
+      </li>
+    </ul>
+  </li>
+</ul>
