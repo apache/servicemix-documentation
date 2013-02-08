@@ -43,9 +43,9 @@
 
         <pdf.required>false</pdf.required>
 
-        <scala.version>2.9.2</scala.version>
+        <scala.version>2.10.0</scala.version>
 
-        <scalate.version>1.5.3</scalate.version>
+        <scalate.version>1.6.1</scalate.version>
         <scalate.mode>production</scalate.mode>
         <scalate.workdir>${basedir}/target/scalateWorkDir</scalate.workdir>
 
@@ -68,18 +68,18 @@
         </dependency>
         <dependency>
             <groupId>org.fusesource.scalate</groupId>
-            <artifactId>scalate-wikitext</artifactId>
+            <artifactId>scalate-wikitext_2.10</artifactId>
             <version>${scalate.version}</version>
         </dependency>
         <dependency>
             <groupId>org.fusesource.scalate</groupId>
-            <artifactId>scalate-page</artifactId>
+            <artifactId>scalate-page_2.10</artifactId>
             <version>${scalate.version}</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.0.6</version>
+            <version>1.0.9</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -314,15 +314,18 @@
                                     <type>war</type>
                                     <outputDirectory>${project.build.directory}/webapp</outputDirectory>
                                     <includes>developers-guide/*.conf</includes>
-                                    <!-- TODO: figure out how to handle these files that refer to the karaf codebase -->
                                     <excludes>
-	                                       developers-guide/security-framework.conf
+                                        <!--
+                                          security-framework.conf refers to the Karaf codebase,
+                                          branding-console.conf does not build properly with Scalate 1.6.1
+                                        -->
+	                                    developers-guide/security-framework.conf, developers-guide/branding-console.conf
                                     </excludes>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>
                     </execution>
-		      <execution>
+		            <execution>
                         <!-- Unpack the manual sources into the /karaf subdirectory -->
                         <id>unpack-user-karaf-manual</id>
                         <phase>generate-resources</phase>
@@ -339,8 +342,7 @@
                                     <outputDirectory>${project.build.directory}/webapp</outputDirectory>
                                     <includes>users-guide/*.conf</includes>
                                     <excludes>
-                                        users-guide/security-framework.conf,
-					users-guide/provisioning-schema.conf
+                                        users-guide/security-framework.conf, users-guide/provisioning-schema.conf
                                     </excludes>
                                 </artifactItem>
                             </artifactItems>
@@ -392,7 +394,7 @@
             </plugin>
             <plugin>
                 <groupId>org.fusesource.scalate</groupId>
-                <artifactId>maven-scalate-plugin</artifactId>
+                <artifactId>maven-scalate-plugin_2.10</artifactId>
                 <version>${scalate.version}</version>
                 <executions>
                     <execution>
@@ -407,16 +409,6 @@
                 </executions>
                 <configuration>
                     <warSourceDirectory>${webapp.dir}</warSourceDirectory>
-                </configuration>
-            </plugin>
-            <plugin>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>2.2</version>
-                <configuration>
-                    <warSourceDirectory>${webapp.dir}</warSourceDirectory>
-                    <archive>
-                        <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
-                    </archive>
                 </configuration>
             </plugin>
             <plugin>
@@ -444,35 +436,6 @@
                             <value>${basedir}/src/etc/logback.xml</value>
                         </systemProperty>
                     </systemProperties>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <version>2.3.7</version>
-                <executions>
-                    <execution>
-                        <id>bundle-manifest</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>manifest</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <supportedProjectTypes>
-                        <supportedProjectType>jar</supportedProjectType>
-                        <supportedProjectType>bundle</supportedProjectType>
-                        <supportedProjectType>war</supportedProjectType>
-                    </supportedProjectTypes>
-                    <instructions>
-                        <Import-Package>javax.servlet,javax.servlet.http,org.osgi.framework,org.osgi.service.packageadmin,javax.swing.tree,*;resolution:=optional</Import-Package>
-                        <Bundle-ClassPath>.,WEB-INF/classes</Bundle-ClassPath>
-                        <Embed-Directory>WEB-INF/lib</Embed-Directory>
-                        <Embed-Dependency>*;scope=compile|runtime</Embed-Dependency>
-                        <Embed-Transitive>true</Embed-Transitive>
-                        <Webapp-Context>documentation</Webapp-Context>
-                    </instructions>
                 </configuration>
             </plugin>
             <plugin>
