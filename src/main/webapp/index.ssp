@@ -55,36 +55,6 @@
 </div>
 
 <div class="left">
-  <a href="nmr/index.html">
-    <h2>NMR Guide</h2>
-  </a>
-</div>
-
-<div class="right">
-  <p>The NMR is a lightweight mechanism for communicating between Camel routes and CXF endpoints.  It also provides listener interfaces to learn about exchanges and endpoints at runtime.</p>
-  <% if (sitegen(engine)) { %>
-    <div class="pdf">
-      <a href="nmr/nmr-guide.pdf" class="pdf">PDF document</a>
-    </div>
-  <% } %>
-</div>
-
-<div class="left">
-  <a href="jbi/index.html">
-    <h2>JBI Guide</h2>
-  </a>
-</div>
-
-<div class="right">
-  <p>Information about the JBI (Java Business Integration) support in Apache ServiceMix and a description for all the JBI components.</p>
-  <% if (sitegen(engine)) { %>
-    <div class="pdf">
-      <a href="jbi/jbi-guide.pdf" class="pdf">PDF document</a>
-    </div>
-  <% } %>
-</div>
-
-<div class="left">
   <a href="commands/index.html">
     <h2>Command Reference</h2>
   </a>
