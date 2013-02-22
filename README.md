@@ -4,12 +4,6 @@ You need to have these two programs installed on your machine:
 - [Pygments](http://pygments.org/) - syntax highlighting for HTML and PDF
 - [Prince XML](http://www.princexml.com/) - converts HTML into PDF for the manual 
 
-## Building SNAPSHOT dependencies ##
-This project depends on a few SNAPSHOT dependencies.  Before you start working on the docs, you need to checkout and build these two projects locally:
-
-- [http://github.com/jstrachan/maven-scala-plugin](http://github.com/jstrachan/maven-scala-plugin)
-- [http://github.com/scalate/scalate](http://github.com/scalate/scalate)
-
 ## Building the documentation project ##
 There are two ways of building the documentation project:
 
@@ -18,6 +12,10 @@ There are two ways of building the documentation project:
   - a war file containing the documentation webapp
   - a pdf file (in `target/sitegen/manual.pdf`)
   - a static website, generated using the same templates (in `target/sitegen`)
+  
+## Publishing the documentation to the website ##
+If you're an Apache ServiceMix committer, you can publish a new copy of the documentation pages with this command:
+`mvn clean install scm-publish:publish-scm`  
   
 ## Known issues ##
 
