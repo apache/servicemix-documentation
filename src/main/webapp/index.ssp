@@ -29,6 +29,7 @@
   <p>Apache ServiceMix contains a lot of different components and it embeds a lot of other Apache projects.  This user guide will help you select and configure the right components when building your own solution.</p>
 </div>
 
+
 <div class="left">
   <a href="activemq/index.html">
     <h2>ActiveMQ Guide</h2>
@@ -52,6 +53,16 @@
       <a href="camel/camel-guide.pdf" class="pdf">PDF document</a>
     </div>
   <% } %>
+</div>
+
+<div class="left">
+  <a href="activiti/index.html">
+    <h2>Activiti Guide</h2>
+  </a>
+</div>
+
+<div class="right">
+  <p>Apache ServiceMix embeds Activiti to provide a light-weight workflow and Business Process Management (BPM) Platform targeted at business people, developers and system admins, ...</p>
 </div>
 
 <div class="left">
