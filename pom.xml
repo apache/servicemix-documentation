@@ -32,7 +32,7 @@
     <groupId>org.apache.servicemix</groupId>
     <artifactId>documentation</artifactId>
     <name>Apache ServiceMix Documentation</name>
-    <version>4.4.0-SNAPSHOT</version>
+    <version>4.5.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <prerequisites>
@@ -53,12 +53,12 @@
         <scalate.mode>production</scalate.mode>
         <scalate.workdir>${basedir}/target/scalateWorkDir</scalate.workdir>
 
-        <camel.version>2.8.5</camel.version>
-        <components.version>2011.01</components.version>
-        <karaf.version>2.2.4</karaf.version>
+        <camel.version>2.10.3</camel.version>
+        <components.version>2013.01</components.version>
+        <karaf.version>2.2.10</karaf.version>
 
-        <servicemix.version>4.4.2</servicemix.version>
-        <servicemix.docs.location>4.4.x</servicemix.docs.location>
+        <servicemix.version>4.5.0</servicemix.version>
+        <servicemix.docs.location>4.5.x</servicemix.docs.location>
 
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
@@ -324,7 +324,7 @@
                                           security-framework.conf refers to the Karaf codebase,
                                           branding-console.conf does not build properly with Scalate 1.6.1
                                         -->
-	                                    developers-guide/security-framework.conf, developers-guide/branding-console.conf
+	                                    developers-guide/security-framework.conf, developers-guide/branding-console.conf, developers-guide/archetypes.conf
                                     </excludes>
                                 </artifactItem>
                             </artifactItems>
