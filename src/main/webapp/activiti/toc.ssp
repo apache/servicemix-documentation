@@ -1,0 +1,8 @@
+<ul>
+    <li id="introduction">
+        <a href="${uri("/activiti/index.html")}">Introduction</a>
+    </li>
+    <li id="activiti-camel">
+        <a href="${uri("/activiti/activiti-camel-example.html")}">Activiti and Camel example</a>
+    </li>
+</ul>
