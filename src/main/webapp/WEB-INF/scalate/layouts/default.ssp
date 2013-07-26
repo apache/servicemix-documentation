@@ -45,6 +45,7 @@ limitations under the License.
 		},
 		"plugins" : [ "themes", "html_data", "cookies", "themes" ]
   	  });
+  	  $("#nav").jstree("open_all", -1);
     });
   </script>
   <script type="text/javascript">
