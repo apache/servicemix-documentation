@@ -56,4 +56,9 @@ object Helper {
    */
   def jbi(uri: String) = uri.startsWith("/jbi")
 
+  /**
+   * Determine if this is a page from the Activiti guide
+   */
+  def activiti(uri: String) = uri.startsWith("/activiti")
+
 }
