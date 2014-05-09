@@ -104,6 +104,12 @@ limitations under the License.
             Take a look at our <a href="${uri("/users-guide/getting-started/technology-selection.html")}"</a>technology selection guidelines</a> for more information.</p>
           </div>
           <% } %>
+          <% if (activiti(requestUri)) { %>
+                    <div class="warn">
+                      <p>Due to issue <a href="https://issues.apache.org/jira/browse/SM-2287"</a>SM-2287</a>, Activiti needs to be added in ServiceMix 5 to the boot features before usage.</p>
+                      <p>To add a boot feature, append the feature name to the <code>featuresBoot</code> list in the <code>etc/org.apache.karaf.features.cfg</code>. Afterwards, remove the data directory and start ServiceMix again.</p>
+                    </div>
+                    <% } %>
           <%= body %>
         </div>
       <% } %>
