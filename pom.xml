@@ -32,7 +32,7 @@
     <groupId>org.apache.servicemix</groupId>
     <artifactId>documentation</artifactId>
     <name>Apache ServiceMix Documentation</name>
-    <version>5.0.0-SNAPSHOT</version>
+    <version>6.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <prerequisites>
@@ -56,8 +56,8 @@
         <camel.version>2.10.3</camel.version>
         <karaf.version>2.3.0</karaf.version>
 
-        <servicemix.version>5.0.0-SNAPSHOT</servicemix.version>
-        <servicemix.docs.location>5.0.x</servicemix.docs.location>
+        <servicemix.version>6.0.0-SNAPSHOT</servicemix.version>
+        <servicemix.docs.location>6.x</servicemix.docs.location>
 
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
