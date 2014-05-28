@@ -56,8 +56,8 @@
         <camel.version>2.10.3</camel.version>
         <karaf.version>2.3.0</karaf.version>
 
-        <servicemix.version>5.0.0-SNAPSHOT</servicemix.version>
-        <servicemix.docs.location>5.0.x</servicemix.docs.location>
+        <servicemix.version>5.0.1</servicemix.version>
+        <servicemix.docs.location>5.x</servicemix.docs.location>
 
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
