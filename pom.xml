@@ -53,8 +53,8 @@
         <scalate.mode>production</scalate.mode>
         <scalate.workdir>${basedir}/target/scalateWorkDir</scalate.workdir>
 
-        <camel.version>2.16.2</camel.version>
-        <karaf.version>4.0.0</karaf.version>
+        <camel.version>2.10.3</camel.version>
+        <karaf.version>2.3.0</karaf.version>
 
         <servicemix.version>7.0.0-SNAPSHOT</servicemix.version>
         <servicemix.docs.location>7.x</servicemix.docs.location>
