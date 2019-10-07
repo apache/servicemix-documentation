@@ -47,7 +47,7 @@
 
         <pdf.required>false</pdf.required>
 
-        <scala.version>2.10.0</scala.version>
+        <scala.version>2.13.1</scala.version>
 
         <scalate.version>1.6.1</scalate.version>
         <scalate.mode>production</scalate.mode>
